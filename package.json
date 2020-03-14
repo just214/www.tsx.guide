@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "netlify dev",
     "start": "docusaurus start",
+    "cold-start": "rm -rf .docusaurus && yarn start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy"
