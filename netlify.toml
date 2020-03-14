@@ -1,0 +1,19 @@
+# COMMENT: This a rule for Single Page Applications as Docz site is one
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+
+[build]
+  command = "yarn run build"
+  publish = "build"
+
+# note: each of these fields are OPTIONAL
+[dev]
+  command = "yarn dev" # Command to start your dev server
+  # port = 3000 # Port that the dev server will be listening on
+  # functionsPort = 34567 # port for functions server
+  targetPort = 3000 # Port of target app server
+  publish = "build" # If you use a _redirect file, provide the path to your static content folder
+  # jwtRolePath = "app_metadata.authorization.roles" # Object path we should look for role values for JWT based redirects
+  autoLaunch = false # a Boolean value that determines if Netlify Dev launches the local server address in your browser
