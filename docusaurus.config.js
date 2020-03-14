@@ -12,7 +12,18 @@ module.exports = {
       logo: {
         alt: "Site Logo",
         src: "img/logo.png"
-      }
+      },
+      hideOnScroll: true,
+      links: [
+        {
+          to: "https://github.com/gojutin/www.tsx.guide",
+          label: "GitHub",
+          position: "right"
+        }
+      ]
+    },
+    prism: {
+      defaultLanguage: "tsx"
     },
     algolia: {
       apiKey: "api-key",

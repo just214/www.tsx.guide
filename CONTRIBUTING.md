@@ -1,10 +1,16 @@
 # Contributing
 
+Do you have an idea on how to improve this site or the documentation? Or, do you see something wrong?
+
+Either way, we appreciate any efforts to make this guide great.
+
+There
+
 Hi there! If you have an idea about how to make this site better, or see something that doesn't look right, there are a couple ways you can help.
 
 ## File an Issue
 
-If you don't feel like going in and making any changes to the code yourself, you can file an issue [here]().
+If you don't feel like going in and making any changes to the code yourself, you can file an issue on GitHub [here](https://github.com/gojutin/www.tsx.guide/issues).
 
 There are a number of templates that you can use to
 

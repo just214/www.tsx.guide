@@ -1,6 +1,11 @@
 module.exports = {
   someSidebar: {
-    Introduction: ["welcome", "why-typeScript", "prerequisites"],
+    Introduction: [
+      "introduction/welcome",
+      "introduction/why-typeScript",
+      "introduction/prerequisites",
+      "introduction/get-involved"
+    ],
     "Getting Started": [
       "getting-started/importing-react",
       "getting-started/react-types",

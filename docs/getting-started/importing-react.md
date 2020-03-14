@@ -1,6 +1,7 @@
 ---
 id: importing-react
 title: Importing React
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/getting-started/importing-react.md
 ---
 
 There are two ways to import React into a `.tsx` file:
