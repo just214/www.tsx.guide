@@ -10,7 +10,7 @@
 
 # note: each of these fields are OPTIONAL
 [dev]
-  command = "yarn dev" # Command to start your dev server
+  command = "yarn start" # Command to start your dev server
   # port = 3000 # Port that the dev server will be listening on
   # functionsPort = 34567 # port for functions server
   targetPort = 3000 # Port of target app server

@@ -1,21 +1,10 @@
-```yaml
----
-id: doc-markdown
-title: Markdown Features
-hide_title: false
-hide_table_of_contents: false
-sidebar_label: Markdown :)
-custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
-description: How do I find you when I cannot solve this problem
-keywords:
-  - docs
-  - docusaurus
-image: https://i.imgur.com/mErPwqL.png
----
+# www.tsx.guide
 
-```
+### [https://www.tsx.guide](https://www.tsx.guide)
 
-# Website
+## A guide and cheatsheet for building React apps with TypeScript
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6405ed4b-0a96-4cbf-b786-3bc3bc8f0782/deploy-status)](https://app.netlify.com/sites/tsx-guide/deploys)
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
@@ -43,8 +32,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This site is hosted by Netlify. Any updates to the `master` branch result in a new build to be published.

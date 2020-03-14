@@ -1,16 +1,14 @@
 ---
+
 name: Incorrect or Missing Documentation
 about: Report any incorrect or missing documentation.
 title: hooks/usestate page- Incorrect Info
-labels: Missing / Incorrect Info
-assignees: ''
+labels: Incorrect or Missing Documentation
+assignees: ""
+---## URL
 
----
-
-## URL
-
-// Example: https://www.tsx.guide/hooks/usestate
+Example: https://www.tsx.guide/hooks/usestate
 
 ## ISSUE
 
-// Describe the issue here. Please provide as much information as possible.
+Describe the issue here. Please provide as much information as possible.
