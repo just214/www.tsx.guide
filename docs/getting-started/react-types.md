@@ -18,3 +18,5 @@ Once you import the type definitions, React will expose all of the available typ
 import React, { FC, HTMLAttributes } from "react";
 // You could also use it without destructuring - React.FC
 ```
+
+### React vs JSX Types

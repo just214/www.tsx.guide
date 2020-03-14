@@ -3,8 +3,6 @@ id: prerequisites
 title: Prerequisites
 ---
 
-# Prerequisites
-
 ### An understanding of React
 
 This is not a guide on how to use React. The [React Docs](https://reactjs.org/docs/getting-started.html) do a great job of that. If you are new to React, that is the best place to start.
