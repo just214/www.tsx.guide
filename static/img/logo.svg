@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(2.244,0,0,2.244,-32.1894,-6.0267)">
-        <text x="14.4px" y="83.363px" style="font-family:'Depressionist3Revisited', 'Depressionist 3 Revisited';font-size:80.957px;fill:rgb(77,115,255);">TSX</text>
+<svg width="100%" height="100%" viewBox="0 0 420 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1.19455,0,0,1.19455,-9.31882,-7.68139)">
+        <text x="14.4px" y="83.363px" style="font-family:'Depressionist3Revisited', 'Depressionist 3 Revisited';font-size:83.713px;fill:rgb(77,115,255);">TSX</text>
     </g>
-    <g transform="matrix(0.950979,0,0,0.950979,-13.1755,28.7932)">
-        <text x="11.604px" y="264.303px" style="font-family:'Arial-Black', 'Arial Black', sans-serif;font-weight:900;font-size:90px;fill:rgb(112,112,112);">GUIDE</text>
+    <g transform="matrix(0.950979,0,0,0.950979,170.229,-159.447)">
+        <text x="11.604px" y="264.303px" style="font-family:'Depressionist3Revisited', 'Depressionist 3 Revisited';font-size:105.155px;fill:rgb(112,112,112);">GUID<tspan x="209.926px " y="264.303px ">E</tspan></text>
     </g>
 </svg>

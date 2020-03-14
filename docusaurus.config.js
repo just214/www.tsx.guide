@@ -1,17 +1,17 @@
 module.exports = {
   title: "tsx.guide",
-  tagline: "The tagline of my site",
+  tagline: "A guide for writing React apps with TypeScript",
   url: "https://www.tsx.guide",
   baseUrl: "/",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "", // Usually your GitHub org/user name.
+  projectName: "www.tsx.guide", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "tsx.guide",
+      title: "",
       logo: {
         alt: "Site Logo",
-        src: "img/logo.png"
+        src: "img/logo.svg"
       },
       hideOnScroll: true,
       links: [

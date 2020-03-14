@@ -2,7 +2,7 @@
 
 ### [https://www.tsx.guide](https://www.tsx.guide)
 
-## A guide and cheatsheet for building React apps with TypeScript
+## A guide for writing React apps with TypeScript
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6405ed4b-0a96-4cbf-b786-3bc3bc8f0782/deploy-status)](https://app.netlify.com/sites/tsx-guide/deploys)
 
@@ -21,6 +21,18 @@ $ yarn start
 ```
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
+
+```
+$ yarn cold-start
+```
+
+This command removes the `.docusaurus` directory, then runs `yarn start`.
+
+```
+$ yarn dev
+```
+
+This command starts Netlify Dev, which injects the Algolia environment variables for search. Search will not work otherwise. You do not need to worry about this for contributing to the documentation.
 
 ### Build
 
