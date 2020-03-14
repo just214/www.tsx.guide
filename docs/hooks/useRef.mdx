@@ -1,0 +1,65 @@
+---
+id: useRef
+title: useRef
+---
+
+This hook is typically used to hold the value of one of two things:
+
+1. DOM Elements (div, span, button, etc...)
+2. Mutable Instance Values (string, number, whatever...)
+
+### DOM Elements
+
+Pass a global JSX element type argument to denote the type of element that the ref will hold. These look like `HTML{Name}Element`. Name would be `Div`, `Button`, `Span`, etc..
+
+```tsx
+const inputRef = useRef<HTMLInputElement>(null);
+```
+
+Since the element won't be created at the time of instantiation, you can set the default value to `null`. You don't need to worry about passing in a union.
+
+```tsx
+const inputRef = useRef<HTMLInputElement | null>(null); // Not necessary, but you can do it if you want.
+const inputRef = useRef<HTMLInputElement>(null);
+const buttonRef = useRef<HTMLButtonElement>(null);
+const divRef = useRef<HTMLDivElement>(null);
+```
+
+Refs used to access DOM elements are read-only (to you) and you cannot change the value using `ref.current = ...`. They can only be passed to the `ref` prop of corresponding JSX elements.
+
+```tsx
+// In a component
+
+const inputRef = useRef<HTMLInputElement>(null);
+
+useEffect(() => {
+  inputRef.current = null; // Error- Cannot assign to 'current' because it is a read-only property.ts(2540)
+}, []);
+
+return (
+  <>
+    <input ref={inputRef} />
+    <button ref={inputRef} /> // Error- Not an input element
+  </>
+);
+```
+
+Under the hood, this type becomes `React.RefObject<HTMLInputElement>`.
+
+### Mutable Instance Values
+
+Sometimes you want to store some abritary value in a ref.
+This is usually the case when you want to store a value that will persist through re-renders, but also won't cause re-renders.
+
+You can provide the types for these refs by passing a type argument.
+
+```tsx
+const counter1 = useRef<number>(0); // Okay
+const counter2 = useRef<number>(null); // Be careful...Read-only
+const counter3 = useRef<number | null>(null); // That's better
+const counter4 = useRef<number>(); // This is okay to do. Type is "number | undefined"
+```
+
+Under the hood, this type becomes `React.MutableRefObject<number>`.
+
+[React Docs- useRef](https://reactjs.org/docs/hooks-reference.html#useref)

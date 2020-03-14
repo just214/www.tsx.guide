@@ -1,0 +1,22 @@
+---
+id: prerequisites
+title: Prerequisites
+---
+
+# Prerequisites
+
+### An understanding of React
+
+This is not a guide on how to use React. The [React Docs](https://reactjs.org/docs/getting-started.html) do a great job of that. If you are new to React, that is the best place to start.
+
+If you are new to both React and TypeScript, it is usually best to start with React without TypeScript. It can be challenging to try to learn them both simultaneously.
+
+### An understanding of TypeScript
+
+If you are new to TypeScript, the best place to start is with the [TypeScript Docs](https://www.typescriptlang.org/docs/home.html).
+
+The React type definitions can get rather complex, and make heavy use of [generics](https://www.typescriptlang.org/docs/handbook/generics.html).
+The authors have done an incredible job of making them as simple to use as possible, but there are some things that just can't be avoided:
+
+1. Components can get complex, requiring more verbose types.
+2. React/JSX has **a lot** of types. For instance, every DOM element.

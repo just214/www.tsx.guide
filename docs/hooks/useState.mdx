@@ -1,0 +1,59 @@
+---
+id: useState
+title: useState
+hide_title: false
+hide_table_of_contents: false
+sidebar_label: useState
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: How do I find you when I cannot solve this problem
+keywords:
+  - docs
+  - docusaurus
+image: https://i.imgur.com/mErPwqL.png
+---
+
+### Inferred Types
+
+The `useState` hook is able to infer the type based on the initial value that you supply.
+
+```tsx
+// Pass an empty string as the initial value
+const [name, setName] = useState("");
+
+// No Error
+setName("Gilfoyle");
+
+// Error
+setName(7);
+```
+
+In this example above, `name` is inferred as type `string` and the `setName` function will only accept a string as an argument.
+
+### Explicit Types
+
+Sometimes you want to initialize with a null-ish value while still providing type safety for the eventual value.
+
+You can do this by supplying a `union` to the `useState` hook as a `type argument`:
+
+```tsx
+type User = {
+  id: string;
+  name: string;
+};
+
+const [user, setUser] = useState<User | null>(null); 👈
+
+// Check that user is not null
+useEffect(() => {
+  if (user) {
+    console.log(user.name);
+  }
+}, [user]);
+
+// assert user as User
+useEffect(() => {
+  console.log((user as User).name);
+}, [user]);
+```
+
+Because `user` could be `null`, you will have to do a check that user is not `null` or use an assertion to cast the type.

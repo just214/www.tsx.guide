@@ -1,0 +1,24 @@
+---
+id: useCallback
+title: useCallback
+sidebar_label: useCallback
+---
+
+# useCallback
+
+The `useCallback` hook is used by passing a callback that will be memoized. The arguments of the callback that you provide can be annotated as normal.
+All arguments that are not explicitly typed will be cast as `any`.
+
+If your callback returns a value, you don't usually need to explicitly set the return type as this can usually be inferred.
+
+```tsx
+const update = useCallback(arg => {
+  // arg is of type "any"
+  console.log(arg);
+}, []);
+
+const update = useCallback((arg: string) => {
+  // arg is of type "string"
+  console.log(arg);
+}, []);
+```
