@@ -1,13 +1,12 @@
 ---
 name: Suggestion for Documentation/Site
 about: Share your idea for how to make the documentation or site better
-title: ''
+title: ""
 labels: enhancement
-assignees: ''
-
+assignees: ""
 ---
 
-## SHARE YOUR IDEA
+**Share your idea**
 
 Remember, you can use code blocks like so:
 
