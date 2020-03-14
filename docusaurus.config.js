@@ -11,7 +11,7 @@ module.exports = {
       title: "",
       logo: {
         alt: "Site Logo",
-        src: "img/logo.svg"
+        src: "img/tsx-guide-logo.png"
       },
       hideOnScroll: true,
       links: [
@@ -24,12 +24,12 @@ module.exports = {
     },
     prism: {
       defaultLanguage: "tsx"
-    },
-    algolia: {
-      apiKey: "api-key",
-      indexName: "index-name",
-      algoliaOptions: {} // Optional, if provided by Algolia
     }
+    // algolia: {
+    //   apiKey: "api-key",
+    //   indexName: "index-name",
+    //   algoliaOptions: {} // Optional, if provided by Algolia
+    // }
   },
   presets: [
     [

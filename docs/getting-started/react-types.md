@@ -20,3 +20,5 @@ import React, { FC, HTMLAttributes } from "react";
 ```
 
 ### React vs JSX Types
+
+You may have seen types like `JSX.Element` and `React.Element` used interchangeably in React apps.

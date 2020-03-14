@@ -1,0 +1,17 @@
+---
+id: useDebugValue
+title: useDebugValue
+---
+
+This hook is used inside of custom hooks to add debugging info to the Dev Tools.
+
+If you provide a formatting function as an optional second parameter, the type of the argument that is provided to this function will be inferred.
+
+```tsx
+function useOnline() {
+  const [isOnline, setIsOnline] = useState(false);
+  // ...
+  useDebugValue(isOnline, value => value.trim()); // Error- Property 'trim' does not exist on type 'boolean'.ts(2339)
+  return isOnline;
+}
+```

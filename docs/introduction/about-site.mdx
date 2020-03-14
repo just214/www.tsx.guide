@@ -3,72 +3,10 @@ id: about-site
 title: About this Site
 ---
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import { AboutSite } from "../../src/components/AboutSite";
 
-export const AboutSite = () => {
-  const data = [
-    {
-      text: "Built with Docusaurus (V2)",
-      logo: useBaseUrl("img/docusaurus-logo.svg"),
-      url: "https://v2.docusaurus.io/"
-    },
-    {
-      text: "Powered by React",
-      logo: useBaseUrl("img/react-logo.svg"),
-      url: "https://reactjs.org/"
-    },
-    {
-      text: "Deployed with Netlify",
-      logo: useBaseUrl("img/netlify-logo.svg"),
-      url: "https://www.netlify.com/"
-    },
-    {
-      text: "Hosted on GitHub",
-      logo: useBaseUrl("img/github-logo.svg"),
-      url: "https://github.com/gojutin/www.tsx.guide"
-    }
-  ];
-  const styles = {
-    wrapper: {
-      display: "flex",
-      alignItems: "center",
-      margin: "-20px -25px"
-    },
-    hr: {
-      display: "inline-block",
-      width: "2px",
-      height: "40px",
-      borderRadius: "1px",
-      background: "lightgray",
-      border: "none",
-      marginLeft: "5px"
-    },
-    label: {
-      margin: "0px 40px",
-      marginTop: "-10px"
-    }
-  };
-  return (
-    <div style={{ marginTop: "30px", padding: "20px" }}>
-      {data.map(({ text, logo, url }, index) => {
-        const isLastItem = index === data.length - 1;
-        return (
-          <div key={text}>
-            <div style={styles.wrapper}>
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                <img src={logo} alt={text} height={60} />
-              </a>
-              <h3 style={styles.label}>{text}</h3>
-            </div>
-            {!isLastItem && <hr style={styles.hr} />}
-          </div>
-        );
-      })}
-    </div>
-  );
-};
-
-:::note Click the logos to visit the sites
+:::tip
+Click the logos to visit the sites
 :::
 
 <AboutSite />
