@@ -1,6 +1,6 @@
 ---
 name: Incorrect/Missing Documentation
-about: Report incorrect or missing documentation
+about: Report incorrect or missing documentation.
 title: ""
 labels: Incorrect/Missing Documentation
 assignees: ""

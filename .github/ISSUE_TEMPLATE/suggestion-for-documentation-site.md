@@ -1,6 +1,6 @@
 ---
 name: Suggestion for Documentation/Site
-about: Share your idea for how to make the documentation or site better
+about: Share your idea for how to make the documentation or site better.
 title: ""
 labels: enhancement
 assignees: ""

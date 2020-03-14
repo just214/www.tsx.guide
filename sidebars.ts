@@ -4,8 +4,8 @@ module.exports = {
       "introduction/welcome",
       "introduction/why-typeScript",
       "introduction/prerequisites",
-      "introduction/contributing",
-      "introduction/about-site"
+      "introduction/about-site",
+      "introduction/contributing"
     ],
     "Getting Started": [
       "getting-started/importing-react",
