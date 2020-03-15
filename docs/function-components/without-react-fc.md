@@ -40,13 +40,14 @@ const App = ({loading, greeting}: AppProps ) => {
 
 `React.FC` normally handles providing the types for these props and properties.
 
-- props with `children` and `context`
+- props with `children`
+- Seconds `context` argument
 - `propTypes` property
 - `contextTypes` property
 - `defaultProps` property
 - `displayName` property
 
-You will be responsible for providing types for any of these props you plan to use. Here are the definition for `FC`:
+You will be responsible for providing types for any of these values you plan to use. Here are is the type definition for `FC`:
 
 ```typescript
 interface FunctionComponent<P = {}> {
