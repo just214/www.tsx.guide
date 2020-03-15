@@ -11,9 +11,11 @@ module.exports = {
       title: "",
       logo: {
         alt: "Site Logo",
-        src: "img/tsx-guide-logo.png"
+        src: "img/tsx-guide-logo.png",
+        srcDark: "img/tsx-guide-logo-dark.png"
       },
-      hideOnScroll: true
+      // The srcDark image is not working with this feature. Bug?
+      hideOnScroll: false
     },
     footer: {
       style: "dark",

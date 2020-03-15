@@ -37,11 +37,23 @@ div.navbar__toggle {
   display: none !important;
 }
 
+/* 
+This currently is not working on mobile browsers, but does work in mobile mode on desktop browsers.
+*/
+
+.displayOnlyInLargeViewport_node_modules-\@docusaurus-theme-classic-src-theme-Navbar- {
+  display: block !important;
+}
+
 div.react-toggle.displayOnlyInLargeViewport_node_modules-\@docusaurus-theme-classic-src-theme-Navbar- {
   display: block !important;
 }
 
 @media screen and (max-width: 997px) {
+  .displayOnlyInLargeViewport_node_modules-\@docusaurus-theme-classic-src-theme-Navbar- {
+    display: block !important;
+  }
+
   div.react-toggle.displayOnlyInLargeViewport_node_modules-\@docusaurus-theme-classic-src-theme-Navbar- {
     display: block !important;
   }
