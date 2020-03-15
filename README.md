@@ -6,12 +6,7 @@
 
 ## A guide for writing React apps with TypeScript
 
-<div style="display: flex; align-items: center;">
-<img src="./static/img/docusaurus-logo.svg" alt="Docusaurus Logo" width="40px" style="margin-right: 10px;"/>
-
-#### This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
-
-</div>
+#### <img src="./static/img/docusaurus-logo.svg" alt="Docusaurus Logo" width="40px" style="margin-right: 10px;"/> This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
 ### **Installation**
 
