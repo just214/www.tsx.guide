@@ -13,14 +13,41 @@ module.exports = {
         alt: "Site Logo",
         src: "img/tsx-guide-logo.png"
       },
-      hideOnScroll: true,
+      hideOnScroll: true
+    },
+    footer: {
+      style: "dark",
       links: [
         {
-          to: "https://github.com/gojutin/www.tsx.guide",
-          label: "GitHub",
-          position: "right"
+          title: "Site",
+          items: [
+            {
+              label: "About this Site",
+              to: "site/about-site"
+            },
+
+            {
+              label: "Contributing",
+              to: "site/contributing"
+            },
+            {
+              label: "Code of Conduct",
+              to: "site/code-of-conduct"
+            },
+            {
+              label: "GitHub",
+              to: "https://github.com/gojutin/www.tsx.guide"
+            }
+          ]
         }
-      ]
+
+        // ... other links
+      ],
+      logo: {
+        alt: "tsx.guide logo",
+        src: "img/logo.png"
+      },
+      copyright: `${new Date().getFullYear()}` // You can also put own HTML here
     },
     prism: {
       defaultLanguage: "tsx"

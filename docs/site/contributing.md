@@ -2,7 +2,7 @@
 id: contributing
 title: Contributing
 sidebar_label: Contributing
-custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/introduction/contributing.md
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/site/contributing.md
 description: Contributing to the tsx.guide documentation website.
 keywords:
   - typescript

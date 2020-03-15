@@ -19,16 +19,14 @@ GROUPS- Represent collapsable menu item groups in the sidebar.
 const introduction = createGroup("Introduction", [
   "introduction/welcome",
   "introduction/why-typeScript",
-  "introduction/prerequisites",
-  "introduction/about-site",
-  "introduction/contributing",
-  "introduction/code-of-conduct"
+  "introduction/prerequisites"
 ]);
 
-const gettingStarted = createGroup("Getting Started", [
-  "getting-started/importing-react",
-  "getting-started/react-types",
-  "getting-started/tsx-files"
+const tsxFiles = createGroup("TSX Files", [
+  "tsx-files/tsx-files",
+  "tsx-files/importing-react",
+  "tsx-files/importing-react-types",
+  "tsx-files/jsx-vs-react-types"
 ]);
 
 const hooks = createGroup("Hooks", [
@@ -54,6 +52,11 @@ const reactDOM = createGroup("React DOM", ["mdx"]);
 const examples = createGroup("Examples", ["mdx"]);
 const resources = createGroup("Resources", ["resources/links"]);
 const context = createGroup("Context", ["mdx"]);
+const site = createGroup("Site", [
+  "site/about-site",
+  "site/contributing",
+  "site/code-of-conduct"
+]);
 
 /*
 EXPORT
@@ -62,13 +65,14 @@ EXPORT
 module.exports = {
   sidebar: {
     ...introduction,
-    ...gettingStarted,
+    ...tsxFiles,
     ...hooks,
     ...functionComponents,
     ...classComponents,
     ...context,
     ...reactDOM,
     ...examples,
-    ...resources
+    ...resources,
+    ...site
   }
 };
