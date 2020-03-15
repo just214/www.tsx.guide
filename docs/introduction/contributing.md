@@ -13,7 +13,7 @@ keywords:
   - docs
   - reacttypescript
   - contributing
-image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
 Do you have an idea on how to improve this site or see something that doesn't quite look right? Any contributions to help make this site better are greatly appreciated!
@@ -79,7 +79,7 @@ keywords:
   - docs
   - reacttypescript
   - contributing
-image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
 ```

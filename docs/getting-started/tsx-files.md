@@ -13,7 +13,7 @@ keywords:
   - docs
   - reacttypescript
   - tsx
-image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
 If you are using React with TypeScript, you are doing so in a `.tsx` file.

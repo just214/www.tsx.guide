@@ -13,7 +13,7 @@ keywords:
   - docs
   - reacttypescript
   - code-of-conduct
-image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
 Contributor Covenant Code of Conduct

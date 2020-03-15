@@ -12,7 +12,7 @@ keywords:
   - cheatsheet
   - docs
   - reacttypescript
-image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
 There are so many benefits that come along with choosing to write your React apps in TypeScript:

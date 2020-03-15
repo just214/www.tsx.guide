@@ -10,7 +10,7 @@ function Home() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>tsx.guide</title>
-        <link rel="canonical" href="http://www.tsx.guide" />
+        <link rel="canonical" href="https://www.tsx.guide" />
 
         <meta name="title" content="tsx.guide" />
         <meta
@@ -31,7 +31,7 @@ function Home() {
         />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png"
+          content="https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -43,7 +43,7 @@ function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png"
+          content="https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png"
         />
       </Helmet>
       <Redirect to={useBaseUrl("/introduction/welcome")} />

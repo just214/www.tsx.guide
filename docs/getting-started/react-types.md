@@ -13,7 +13,7 @@ keywords:
   - docs
   - reacttypescript
   - import
-image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
 All of the types needed for React and React DOM are found in the

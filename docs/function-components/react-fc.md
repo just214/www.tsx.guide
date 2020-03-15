@@ -15,7 +15,7 @@ keywords:
   - fc
   - function
   - component
-image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
 The most common way to specify types for a function component is with a generic type provided by React:
