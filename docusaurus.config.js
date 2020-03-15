@@ -25,6 +25,7 @@ module.exports = {
     prism: {
       defaultLanguage: "tsx"
     }
+    // Awaiting approval for Algolia DocSearch
     // algolia: {
     //   apiKey: "api-key",
     //   indexName: "index-name",

@@ -1,5 +1,7 @@
 # www.tsx.guide
 
+<img src="https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png" alt="Logo" >
+
 ### [https://www.tsx.guide](https://www.tsx.guide)
 
 ## A guide for writing React apps with TypeScript
@@ -40,8 +42,12 @@ This command starts Netlify Dev, which injects the Algolia environment variables
 $ yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command generates static content into the `build` directory.
 
 ### Deployment
 
 This site is hosted by Netlify. Any updates to the `master` branch result in a new build to be published.
+
+## Contributing
+
+Thanks for your interest in contributing to this site! Please check out the [Contributing](https://www.tsx.guide/introduction/contributing) page on the website for information about how you can help.
