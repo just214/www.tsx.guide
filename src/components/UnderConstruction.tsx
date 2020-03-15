@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactSVG } from "react-svg";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+
+const URL =
+  "https://res.cloudinary.com/gojutin/image/upload/v1584291258/www.tsx.guide/undraw_under_construction.svg";
 
 const SVG = styled(ReactSVG)`
   svg {
@@ -20,6 +22,6 @@ export const UnderConstruction = () => (
   <div>
     <h3>This page is not quite ready yet. Please check back soon.</h3>
     <br />
-    <SVG src={useBaseUrl("img/undraw_under_construction.svg")} />
+    <SVG src={URL} />
   </div>
 );

@@ -37,6 +37,10 @@ div.navbar__toggle {
   display: none !important;
 }
 
+div.react-toggle.displayOnlyInLargeViewport_node_modules-\@docusaurus-theme-classic-src-theme-Navbar- {
+  display: block !important;
+}
+
 @media screen and (max-width: 997px) {
   div.react-toggle.displayOnlyInLargeViewport_node_modules-\@docusaurus-theme-classic-src-theme-Navbar- {
     display: block !important;
