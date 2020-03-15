@@ -3,15 +3,25 @@ id: useState
 title: useState
 sidebar_label: useState
 custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/hooks/useState.mdx
-hide_title: false
-hide_table_of_contents: false
+description: A guide to using the React useState hook with TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - hooks
+  - useState
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 ### Inferred Types
 
 The `useState` hook is able to infer the type based on the initial value that you supply.
 
-```tsx
+```tsx {2}
 // Pass an empty string as the initial value
 const [name, setName] = useState("");
 

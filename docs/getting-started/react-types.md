@@ -1,6 +1,19 @@
 ---
 id: react-types
 title: React Types
+sidebar_label: React Types
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/getting-started/react-types.mdx
+description: A guide to importing React with TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - import
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 All of the types needed for React and React DOM are found in the

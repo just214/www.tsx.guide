@@ -2,13 +2,25 @@
 id: welcome
 title: Welcome!
 hide_title: true
+sidebar_label: Welcome!
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/introduction/welcome.md
+description: A guide for writing React apps with TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 import {Welcome} from "../../src/components/Welcome";
 
 <Welcome />
 
-**This is a Guide and Cheatsheet for Writing React Apps with TypeScript.**
+**This is a guide and cheatsheet for writing React apps with TypeScript.**
 
 TypeScript and React make a wonderful pair.
 Not only does this pairing offer a great developer experience full of rich tooling, but also a major confidence boost in the code that you ship.

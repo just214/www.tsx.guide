@@ -1,6 +1,19 @@
 ---
 id: code-of-conduct
 title: Code of Conduct
+sidebar_label: Code of Conduct
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/introduction/code-of-conduct.md
+description: Code of conduct for the tsx.guide website.
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - code-of-conduct
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 Contributor Covenant Code of Conduct

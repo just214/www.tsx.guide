@@ -4,7 +4,7 @@ module.exports = {
   url: "https://www.tsx.guide",
   baseUrl: "/",
   favicon: "img/favicon.ico",
-  organizationName: "", // Usually your GitHub org/user name.
+  organizationName: "gojutin", // Usually your GitHub org/user name.
   projectName: "www.tsx.guide", // Usually your repo name.
   themeConfig: {
     navbar: {

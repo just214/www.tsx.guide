@@ -1,13 +1,26 @@
 ---
 id: contributing
 title: Contributing
+sidebar_label: Contributing
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/introduction/contributing.md
+description: Contributing to the tsx.guide documentation website.
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - contributing
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 Do you have an idea on how to improve this site or see something that doesn't quite look right? Any contributions to help make this site better are greatly appreciated!
 
 There are two ways that you can help:
 
-1. #### Share your ideas, feedback, mistakes, or bugs in a GitHub Issue.
+1. #### Share your ideas/feedback, or report mistakes/bugs in a GitHub Issue.
 2. #### Change the code yourself.
 
 > Please review the [Code of Conduct](code-of-conduct) before you make any contributions.
@@ -26,11 +39,11 @@ When you click the `New Issue` button, you can choose to file an issue for one o
 
 ## Change the Code
 
-The source code can be thought of in two parts-
+The source code is made up of two parts-
 
 1. **The website**
 
-This site is built with [Docusaurus V2](https://v2.docusaurus.io/) and has few customizations beyond the defaults.
+This site is built with [Docusaurus 2](https://v2.docusaurus.io/) and has few customizations beyond the defaults.
 
 2. **The Documentation**
 
@@ -38,28 +51,35 @@ The documentation is a collection of markdown and MDX files in a root-level `doc
 
 ### Editing an Existing Page
 
-The easiest way to propose a change to a page is by pressing the `Edit this page` button at the buttom of each page on the website. This will take you to the file in GitHub, where you can make an edit to the page without having to download the code (login required).
+The easiest way to propose a change to a page is by pressing the `Edit this page` button at the bottom of each page on the website. This will take you to the file in GitHub, where you can make an edit to the page without having to download the code (login required).
 
 The second option is to fork the repo, and submit the changes through a Pull Request.
 
-### Adding New Pages
+### Adding New Documentation Pages
 
-Checklist for adding a new documentation page:
-
-- [ ] Make sure you are using `.md` or `.mdx` files in the root-level `docs` folder.
-- [ ] Make sure you are using the correct front matter formatting. See example below.
-- [ ] Add the new page to the sidebar in the root-level `sidebars.ts` file.
+- Make sure you are using `.md` or `.mdx` files in the root-level `docs` folder.
+- Make sure you are using the correct front matter formatting. See example below.
+- Add the new page to the sidebar in the root-level `sidebars.ts` file.
 
 **Front matter example**
 
 ```yaml
 ---
-id: useState
-title: useState
-sidebar_label: useState
-custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/hooks/useState.mdx
-hide_title: false
-hide_table_of_contents: false
+id: contributing
+title: Contributing
+sidebar_label: Contributing
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/introduction/contributing.md
+description: Contributing to the tsx.guide documentation website.
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - contributing
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 ```

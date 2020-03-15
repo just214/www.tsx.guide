@@ -1,6 +1,21 @@
 ---
 id: react-fc
 title: React FC
+sidebar_label: React FC
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/function-components/react-fc.mdx
+description: A guide to using the React FC type with TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - fc
+  - function
+  - component
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 The most common way to specify types for a function component is with a generic type provided by React:

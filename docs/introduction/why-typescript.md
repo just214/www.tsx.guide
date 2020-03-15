@@ -1,6 +1,18 @@
 ---
 id: why-typeScript
 title: Why TypeScript?
+sidebar_label: Why TypeScript?
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/introduction/why-typeScript.md
+description: A guide for writing React apps with TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 There are so many benefits that come along with choosing to write your React apps in TypeScript:

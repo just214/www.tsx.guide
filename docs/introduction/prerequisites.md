@@ -1,6 +1,19 @@
 ---
 id: prerequisites
 title: Prerequisites
+sidebar_label: Prerequisites
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/introduction/prerequisites.md
+description: A guide for writing React apps with TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - prerequisites
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 ### An understanding of React

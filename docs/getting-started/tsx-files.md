@@ -1,6 +1,19 @@
 ---
 id: tsx-files
 title: TSX Files
+sidebar_label: TSX Files
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/getting-started/tsx-files.mdx
+description: A guide to understanding TSX files with React and TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - tsx
+image: https://res.cloudinary.com/gojutin/image/upload/v1584230645/www.tsx.guide/tsx-guide-logo.png
 ---
 
 If you are using React with TypeScript, you are doing so in a `.tsx` file.
