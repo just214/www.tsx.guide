@@ -25,11 +25,13 @@ Both of these libraries should be included as dev dependencies for all of your R
 yarn add --dev @types/react @types/react-dom
 ```
 
-Once you import the type definitions, React will expose all of the available types as named exports.
+Once you import the type definitions, React and React DOM will expose all of the available types as named exports.
 
 ```ts
 import React, { FC, HTMLAttributes } from "react";
-// You could also use it without destructuring - React.FC
+import ReactDOM, { Renderer } from "react-dom";
+// You could also use them without destructuring -
+// React.FC or ReactDOM.Renderer
 ```
 
 [@types/react]: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react

@@ -27,12 +27,12 @@ import * as ReactDOM from "react-dom";
 
 **Option 2:\***
 
-\* Requires the `allowSyntheticDefaultImports` or `esModuleInterop` compiler option set to `true`.
-
 ```tsx
 import React from "react";
 import ReactDOM from "react-dom";
 ```
+
+**\* Requires the `allowSyntheticDefaultImports` or `esModuleInterop` compiler option set to `true`.**
 
 #### Why `allowSyntheticDefaultImports`?
 
