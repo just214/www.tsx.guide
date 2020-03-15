@@ -46,12 +46,13 @@ const hooks = createGroup("Hooks", [
 ]);
 
 const functionComponents = createGroup("Function Components", [
-  "function-components/react-fc"
+  "function-components/react-fc",
+  "function-components/without-react-fc"
 ]);
 const classComponents = createGroup("Class Components", ["mdx"]);
 const reactDOM = createGroup("React DOM", ["mdx"]);
 const examples = createGroup("Examples", ["mdx"]);
-const resources = createGroup("Resources", ["mdx"]);
+const resources = createGroup("Resources", ["resources/links"]);
 const context = createGroup("Context", ["mdx"]);
 
 /*

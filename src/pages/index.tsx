@@ -19,7 +19,7 @@ function Home() {
         />
         <meta
           name="keywords"
-          content="typescript, react, tsx, reacttypeScript, Guide, cheatsheet, docs"
+          content="typescript, react, tsx, reacttypescript, guide, cheatsheet, docs"
         ></meta>
 
         <meta property="og:type" content="website" />
