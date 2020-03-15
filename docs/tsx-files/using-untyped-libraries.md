@@ -1,0 +1,33 @@
+---
+id: using-untyped-libraries
+title: Using Untyped Libraries
+sidebar_label: Using Untyped Libraries
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/tsx-files/importing-untyped-libraries.mdx
+description: Using untyped libraries in React and TypeScript.
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - hooks
+  - import
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
+---
+
+Unfortunately, not all open-source open-sourced React component libraries ship with TypeScript types. Even so, there are still hope.
+
+First, check to see if the types live in [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped). It's usually easiest just to search the web or npm for `@types/name-of-package`.
+
+One work-around is to grab a component's prop types using `React.ComponentProps` and `typeof`:
+
+```tsx {2}
+import { Button } from "untyped-library";
+type ButtonProps = React.ComponentProps<typeof Button>;
+
+const MyButton: React.FC<ButtonProps> = props => (
+  <Button {...props}>{props.children}</Button>
+);
+```

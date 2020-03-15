@@ -26,6 +26,7 @@ const tsxFiles = createGroup("TSX Files", [
   "tsx-files/about-tsx-files",
   "tsx-files/importing-react",
   "tsx-files/importing-react-types",
+  "tsx-files/using-untyped-libraries",
   "tsx-files/importing-other-file-types",
   "tsx-files/jsx-vs-react-types"
 ]);
