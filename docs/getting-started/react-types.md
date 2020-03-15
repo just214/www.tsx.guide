@@ -42,9 +42,9 @@ TypeScript made the decision to provide first-class support for JSX and created 
 
 That is where the JSX types comes from.
 
-React ships their own types in the [@types/react] package. These types wrap the JSX types with some React-specific types.
+React ships their own types in the [@types/react] package. These types wrap the JSX types with some React-specific things.
 
-For instance, if you are using `JSX.Element` in a React project, then you are really using `React.ReactElement`.
+For instance, if you are using `JSX.Element` in a React project, then you are really using `React.ReactElement` under the hood.
 
 From the React Types:
 
@@ -57,6 +57,12 @@ declare global {
         }
         // ...
 ```
+
+So, which one should you use? It probably doesn't matter, but the React types might be a better choice for the following reasons:
+
+- JSX types don't support React specific things like Hooks so you would have to mix/match
+- There seems to be more information about the React types
+- It's not always clear how the JSX and React types are being used together
 
 [@types/react]: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react
 [@types/react-dom]: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom
