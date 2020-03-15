@@ -1,10 +1,16 @@
+/*
+  This page just redirects to the https://tsx.guide/introduction/welcome. 
+  
+  react-helmet is used to provide meta data for when people share a link
+  for https://tsx.guide so that they get nice unfurling, Twitter card, etc.
+*/
 import React from "react";
 import { Helmet } from "react-helmet";
 
 import { Redirect } from "@docusaurus/router";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-function Home() {
+const App = () => {
   return (
     <>
       <Helmet>
@@ -49,6 +55,6 @@ function Home() {
       <Redirect to={useBaseUrl("/introduction/welcome")} />
     </>
   );
-}
+};
 
-export default Home;
+export default App;

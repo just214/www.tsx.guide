@@ -20,8 +20,8 @@ Do you have an idea on how to improve this site or see something that doesn't qu
 
 There are two ways that you can help:
 
-1. #### Share your ideas/feedback, or report mistakes/bugs in a GitHub Issue.
-2. #### Change the code yourself.
+1. **Share your ideas/feedback, or report mistakes/bugs in a GitHub Issue.**
+2. **Change the code yourself.**
 
 > Please review the [Code of Conduct](code-of-conduct) before you make any contributions.
 
