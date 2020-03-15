@@ -1,8 +1,6 @@
-# www.tsx.guide
+# tsx.guide [https://www.tsx.guide](https://www.tsx.guide)
 
-<img src="https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png" alt="Logo" >
-
-### [https://www.tsx.guide](https://www.tsx.guide)
+<img src="https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png" alt="Logo" style="max-width: 400px" />
 
 ## A guide for writing React apps with TypeScript
 
