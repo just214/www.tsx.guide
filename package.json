@@ -14,8 +14,8 @@
     "@docusaurus/core": "^2.0.0-alpha.48",
     "@docusaurus/preset-classic": "^2.0.0-alpha.48",
     "classnames": "^2.2.6",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-svg": "^11.0.14",
     "styled-components": "^5.0.1"
   },

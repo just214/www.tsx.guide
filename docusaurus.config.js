@@ -2,7 +2,7 @@ module.exports = {
   title: "tsx.guide",
   tagline: "A guide for writing React apps with TypeScript",
   url: "https://www.tsx.guide",
-  baseUrl: "/",
+  baseUrl: "/introduction/welcome",
   favicon: "img/favicon.ico",
   organizationName: "gojutin", // Usually your GitHub org/user name.
   projectName: "www.tsx.guide", // Usually your repo name.
