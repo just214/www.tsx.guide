@@ -45,7 +45,7 @@ module.exports = {
       ],
       logo: {
         alt: "tsx.guide logo",
-        src: "img/logo.png"
+        src: "img/tsx-guide-logo-dark.png"
       },
       copyright: `${new Date().getFullYear()}` // You can also put own HTML here
     },
