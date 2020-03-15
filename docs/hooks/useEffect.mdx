@@ -17,6 +17,79 @@ keywords:
 image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
-import { UnderConstruction } from "../../src/components/UnderConstruction";
+There is nothing really different about using the `useEffect` hook with TypeScript since you supply it with a callback with no arguments.
 
-<UnderConstruction />
+### Returning a Value
+
+Just remember that this hook allows you to return a function that is called only once right before the component in unmounted. Returning anything but a function or `undefined` will result in a TypeScript error.
+
+Here is an example from [react-typescript-cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet/blob/master/README.md) that demonstrates how a `setTimeout` implicitly returns a `number` type, which results in an error:
+
+```tsx
+function DelayedEffect(props: { timerMs: number }) {
+  const { timerMs } = props;
+  // bad! setTimeout implicitly returns a number because the arrow function body isn't wrapped in curly braces
+  useEffect(
+    () =>
+      setTimeout(() => {
+        /* do stuff */
+      }, timerMs),
+    [timerMs]
+  );
+  return null;
+}
+```
+
+This can be easily mitigated with curly braces:
+
+```tsx {4,8}
+function DelayedEffect(props: { timerMs: number }) {
+  const { timerMs } = props;
+  // bad! setTimeout implicitly returns a number because the arrow function body isn't wrapped in curly braces
+  useEffect(() => {
+    setTimeout(() => {
+      /* do stuff */
+    }, timerMs);
+  }, [timerMs]);
+  return null;
+}
+```
+
+## Using Async Effects
+
+TypeScript will throw an error if you try to pass an `async` callback function to a `useEffect` hook:
+
+```tsx
+useEffect(async () => {
+  await getData(); // Error
+}, []);
+```
+
+There are two approaches that you can take to writing asynchronous `useEffect` hooks:
+
+1. A seperate function
+
+```tsx
+  useEffect(() => {
+    // Create an scoped async function in the hook
+    async function getDataFn() {
+      await getData();
+    }
+    // Execute the created function directly
+    getDataFn();
+  }, []);
+return <div
+```
+
+2. An IIFE (Immediately Invoked Function Expression)
+
+```tsx
+useEffect(() => {
+  // Using an IIFE
+  (async function getDataFn() {
+    await getDataFn();
+  })();
+}, []);
+```
+
+There is a great [Medium Article](https://medium.com/javascript-in-plain-english/how-to-use-async-function-in-react-hook-useeffect-typescript-js-6204a788a435) that goes into more detail.

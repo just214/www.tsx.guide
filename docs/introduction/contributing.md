@@ -84,6 +84,8 @@ image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide
 
 ```
 
+Remember, each page is a seperate route that manages it's own SEO. The `title`, `description`,`keywords`, and `image` are all used to populate the respective meta tags.
+
 And, here are all of the available front matter options:
 
 Copied from [https://v2.docusaurus.io/docs/markdown-features](https://v2.docusaurus.io/docs/markdown-features)
