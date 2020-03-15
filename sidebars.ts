@@ -13,7 +13,7 @@ function createGroup(groupName, links) {
 }
 
 /*
-GROUPS- Represent collapsable menu item groups in the sidebar.
+GROUPS- Represent collapsible menu item groups in the sidebar.
 */
 
 const introduction = createGroup("Introduction", [
@@ -49,11 +49,15 @@ const functionComponents = createGroup("Function Components", [
   "function-components/react-fc",
   "function-components/without-react-fc"
 ]);
-const classComponents = createGroup("Class Components", ["mdx"]);
-const reactDOM = createGroup("React DOM", ["mdx"]);
+
+const other = createGroup("Other", [
+  "other/class-components",
+  "other/default-props",
+  "other/types-vs-interfaces"
+]);
+
 const examples = createGroup("Examples", ["mdx"]);
 const resources = createGroup("Resources", ["resources/links"]);
-const context = createGroup("Context", ["mdx"]);
 const site = createGroup("Site", [
   "site/about-site",
   "site/contributing",
@@ -70,9 +74,7 @@ module.exports = {
     ...tsxFiles,
     ...hooks,
     ...functionComponents,
-    ...classComponents,
-    ...context,
-    ...reactDOM,
+    ...other,
     ...examples,
     ...resources,
     ...site
