@@ -1,0 +1,45 @@
+---
+id: forwardRef-createRef
+title: forwardRef & createRef
+sidebar_label: forwardRef & createRef
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/other/forwardRef-createRef.mdx
+description: Using forwardRef and createRef in React and TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - forwardRef
+  - createRef
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
+---
+
+### `forwardRef`
+
+Imaging you wanted to create an `Input` component with some added props, but you wanted it to be treated just like a normal `input` element.
+It should be able to accept any props that an `input` element can accept, and should be able to be assigned a ref that can be used to focus, blur, etc.
+
+This is exactly where the `forwardRef` comes in.
+
+Here is an example of a component that uses `forwardRef` to meet all of this criteria. The types are provided as type arguments to the generic `forwardRef` function.
+
+```tsx {7}
+type Props = React.HTMLProps<HTMLInputElement> & {
+  myCustomProp?: boolean;
+};
+
+type Ref = HTMLInputElement;
+
+export const Input = React.forwardRef<Ref, Props>((props, ref) => {
+  const { myCustomProp, ...rest } = props;
+  // Make sure myCustomProp is not spread into the input element.
+  return <input ref={ref} {...rest} />;
+});
+```
+
+Notice how the type arguments are passed in the order of `Ref`/`Props`, but the value arguments are provided back in the opposite order.
+
+`forwardRef` is especially useful for component library authors where you are wrapping the instrinsic elements with styles or extra features.
