@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-const IS_DEV = false;
+const IS_DEV = true;
 
 const options = [
   "Select a Type",

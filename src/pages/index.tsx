@@ -52,7 +52,9 @@ const App = () => {
           content="https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png"
         />
       </Helmet>
-      <Redirect to={useBaseUrl("/introduction/welcome")} />
+      {!window.location.pathname.includes(".netlify") && (
+        <Redirect to={useBaseUrl("/introduction/welcome")} />
+      )}
     </>
   );
 };
