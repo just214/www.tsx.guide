@@ -1,8 +1,8 @@
 # COMMENT: This a rule for Single Page Applications as Docz site is one
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
+# [[redirects]]
+#   from = "/*"
+#   to = "/"
+#   status = 200
 
 [build]
   command = "yarn run build"
