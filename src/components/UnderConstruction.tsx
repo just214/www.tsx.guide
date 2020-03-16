@@ -18,15 +18,8 @@ const SVG = styled(ReactSVG)`
   }
 `;
 
-async function triggerEvent() {
-  fetch("/.netlify/functions/getReactType")
-    .then(response => response.json())
-    .then(json => console.log(json));
-}
-
 export const UnderConstruction = () => (
   <div>
-    <button onClick={triggerEvent}>Trigger Event</button>
     <h3>This page is not quite ready yet. Please check back soon.</h3>
     <br />
     <SVG src={URL} />
