@@ -18,6 +18,7 @@
     "classnames": "^2.2.6",
     "netlify-lambda": "^1.6.3",
     "react": "^16.13.0",
+    "react-docgen-typescript": "^1.16.3",
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "react-svg": "^11.0.14",
@@ -41,7 +42,6 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-helmet": "^5.0.15",
     "@types/styled-components": "^5.0.1",
-    "react-docgen-typescript": "^1.16.3",
     "rimraf": "^3.0.2"
   }
 }
