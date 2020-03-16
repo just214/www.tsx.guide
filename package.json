@@ -19,7 +19,8 @@
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "react-svg": "^11.0.14",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "typescript": "^3.8.3"
   },
   "browserslist": {
     "production": [
