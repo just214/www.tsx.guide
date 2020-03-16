@@ -1,7 +1,7 @@
-const { parse } = require("react-docgen-typescript").withDefaultConfig();
+// const { parse } = require("react-docgen-typescript").withDefaultConfig();
 
-const res = parse("../src/components/AboutSite.tsx");
-const fs = require("fs");
+// const res = parse("../src/components/AboutSite.tsx");
+// const fs = require("fs");
 
 // res[0].props || {}
 
