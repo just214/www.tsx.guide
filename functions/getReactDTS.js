@@ -5,7 +5,7 @@ const path = require("path");
 
 exports.handler = async (event, context) => {
   const type = event.queryStringParameters.type;
-  const res = parse(require.resolve("./Test.tsx"));
+  const res = parse("./Test.tsx");
 
   const result = res.find(({ displayName }) => displayName === type).props;
 
