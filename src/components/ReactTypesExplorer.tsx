@@ -130,7 +130,7 @@ type Prop = {
   };
 };
 
-const IS_DEV = true;
+const IS_DEV = false;
 
 export const ReactTypesExplorer = () => {
   const [choice, setChoice] = useState("");
