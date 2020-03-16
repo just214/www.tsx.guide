@@ -4,7 +4,7 @@
   status = 200
 
 [build]
-  command = "yarn run build && cd functions && npm install"
+  command = "yarn run build && cd ./functions/getReactDTS && npm install && cd ../../ && npm run generate"
   publish = "build"
   functions = "./functions"
 
