@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-const IS_DEV = false;
+const IS_DEV = true;
 
 const options = [
   "Select a Type",
@@ -146,16 +146,6 @@ const Flex = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-`;
-
-const Name = styled.h3`
-  border: none;
-  color: #f5f5f5;
-  background: dodgerblue;
-  border-radius: 3px;
-  font-size: 14px;
-  padding: 2px 5px;
-  margin: 0px 5px;
 `;
 
 type Prop = {
