@@ -1,3 +1,4 @@
+require("typescript");
 const { parse } = require("react-docgen-typescript").withDefaultConfig();
 
 const path = require("path");

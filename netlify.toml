@@ -4,9 +4,9 @@
   status = 200
 
 [build]
-  command = "yarn && yarn run build && cd ./functions && yarn && cd ../"
+  command = "yarn run build"
   publish = "build"
-  functions = "./functions"
+  functions = "functions"
 
 # note: each of these fields are OPTIONAL
 [dev]
