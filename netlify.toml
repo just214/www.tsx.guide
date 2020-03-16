@@ -6,7 +6,7 @@
 [build]
   command = "yarn run build && cd functions && npm install"
   publish = "build"
-  functions = "functions"
+  functions = "./functions"
 
 # note: each of these fields are OPTIONAL
 [dev]
