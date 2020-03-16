@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/.netlify/**"
-  to = "/.netlify/**"
+  from = "/.netlify/*"
+  to = "/.netlify/*"
   status = 200
 
 [[redirects]]
