@@ -137,13 +137,15 @@ export const ReactTypesExplorer = () => {
   const [result, setResult] = useState<Prop[]>([]);
 
   useEffect(() => {
-    const apiPath = `/.netlify/functions/getReactType?type=${choice}`;
-    const basePath = IS_DEV ? "http://localhost:34567" : "";
-
     if (choice) {
+      const apiPath = `/.netlify/functions/getReactType?type=${choice}`;
+      const basePath = IS_DEV ? "http://localhost:34567" : "";
       fetch(`${basePath}${apiPath}`)
         .then(response => response.json())
-        .then(json => setResult(json));
+        .then(json => setResult(json))
+        .catch(error => {
+          console.log("ERROR::: ", error);
+        });
     }
   }, [choice]);
 
