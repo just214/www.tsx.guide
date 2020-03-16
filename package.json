@@ -8,15 +8,12 @@
     "cold-start": "rimraf .docusaurus && yarn start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "install:functions": "netlify-lambda install functions",
-    "build:functions": "netlify-lambda build"
+    "deploy": "docusaurus deploy"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.48",
     "@docusaurus/preset-classic": "^2.0.0-alpha.48",
     "classnames": "^2.2.6",
-    "netlify-lambda": "^1.6.3",
     "react": "^16.13.0",
     "react-docgen-typescript": "^1.16.3",
     "react-dom": "^16.13.0",
