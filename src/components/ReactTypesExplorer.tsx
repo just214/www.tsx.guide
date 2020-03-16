@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+
+const IS_DEV = false;
 
 const options = [
+  "Select a Type",
   "HTMLElement",
   "HTMLAnchorElement",
   "HTMLAreaElement",
@@ -116,6 +120,44 @@ const options = [
   "SVGViewElement"
 ];
 
+const Input = styled.input`
+  display: block;
+  border-radius: 6px;
+  appearance: none;
+  background: transparent;
+  padding: 5px 10px;
+  font-size: 18px;
+  border: 1px solid lightgray;
+  width: 50%;
+`;
+
+const Select = styled.select`
+  display: block;
+  border-radius: 6px;
+  appearance: none;
+  background: transparent;
+  padding: 5px 10px;
+  font-size: 18px;
+  border: 1px solid lightgray;
+  width: 50%;
+`;
+
+const Flex = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const Name = styled.h3`
+  border: none;
+  color: #f5f5f5;
+  background: dodgerblue;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 2px 5px;
+  margin: 0px 5px;
+`;
+
 type Prop = {
   name: string;
   description: null | string;
@@ -130,46 +172,88 @@ type Prop = {
   };
 };
 
-const IS_DEV = false;
-
 export const ReactTypesExplorer = () => {
   const [choice, setChoice] = useState("");
   const [result, setResult] = useState<Prop[]>([]);
+  const [filter, setFilter] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (choice) {
+      if (choice === "Select a Type") {
+        setResult([]);
+        return;
+      }
       const apiPath = `/.netlify/functions/getReactType?type=${choice}`;
       const basePath = IS_DEV ? "http://localhost:34567" : "";
+      setLoading(true);
+      setResult([]);
       fetch(`${basePath}${apiPath}`)
         .then(response => response.json())
         .then(json => setResult(json))
         .catch(error => {
           console.log("ERROR::: ", error);
+        })
+        .finally(() => {
+          setLoading(false);
         });
     }
   }, [choice]);
 
-  // console.log("result", result);
+  const filteredResults = result.filter(value =>
+    value.name.toLowerCase().includes(filter.toLowerCase())
+  );
 
   return (
     <>
-      <select value={choice} onChange={e => setChoice(e.target.value)}>
-        {options.map(opt => {
-          return (
-            <option key={opt} value={opt}>
-              {opt}
-            </option>
-          );
-        })}
-      </select>
+      <Flex>
+        <Select value={choice} onChange={e => setChoice(e.target.value)}>
+          {options.map(opt => {
+            return (
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
+            );
+          })}
+        </Select>
 
-      {result.map(res => {
+        <Input
+          value={filter}
+          onChange={e => setFilter(e.target.value)}
+          placeholder="Filter"
+        />
+      </Flex>
+
+      {loading && <h3>Loading...</h3>}
+      {!!filteredResults.length && (
+        <h3>
+          {filteredResults.length} available prop
+          {filteredResults.length === 1 ? "" : "s"}
+        </h3>
+      )}
+
+      {filteredResults.map(res => {
         return (
           <div key={res.name}>
-            <h3> {res.name}</h3>
+            <h3 style={{ margin: "20px 0px" }}> {res.name}</h3>
             <p>{res.description ? res.description.substring(0, 100) : ""}</p>
-            <p>Required: {res.required.toString()}</p>
+            <p>
+              Required: <b>{res.required ? "true" : "false"}</b>
+            </p>
+            <p>
+              Parent Name: <b>{res.parent.name}</b>
+            </p>
+            <p>
+              Parent fileName:{" "}
+              <b>
+                {res.parent.fileName.replace(
+                  "www.tsx.guide/functions/node_modules/",
+                  ""
+                )}
+              </b>
+            </p>
             <pre>{res.type.name}</pre>
+            <hr />
           </div>
         );
       })}

@@ -8,7 +8,9 @@
     "cold-start": "rimraf .docusaurus && yarn start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy"
+    "deploy": "docusaurus deploy",
+    "install:functions": "netlify-lambda install functions",
+    "build:functions": "netlify-lambda build"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.48",
