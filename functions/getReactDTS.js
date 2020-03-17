@@ -2,7 +2,7 @@ require("typescript");
 const { parse } = require("react-docgen-typescript").withDefaultConfig();
 const path = require("path");
 
- const lll = require.resolve('./Test.tsx');
+ const lll = path.join( __dirname, "Test.tsx");
  console.log("LLL", lll)
 
 exports.handler = async (event, context) => {
