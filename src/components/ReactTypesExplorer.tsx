@@ -88,6 +88,9 @@ export const ReactTypesExplorer = () => {
       <Show when={!!result}>
         <ReactTypeResult result={result as Result} />
       </Show>
+      <Show when={!result}>
+        <p>Select a React Type Definition to explore it's properties.</p>
+      </Show>
     </>
   );
 };

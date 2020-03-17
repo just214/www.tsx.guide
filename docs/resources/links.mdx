@@ -16,18 +16,36 @@ keywords:
 image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
-## React
+import { ResourceLinkList } from "../../src/components/ResourceLinkList";
 
-[React Docs](https://reactjs.org/docs/getting-started.html)
+export const reactLinks = [
+  ["React Docs", "https://reactjs.org/docs/getting-started.html"],
+  [
+    "React Types Definitions",
+    "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react"
+  ],
+  [
+    "react-typescript-cheatsheet",
+    "https://github.com/typescript-cheatsheets/react-typescript-cheatsheet"
+  ]
+];
 
-[React Types Definitions (@types/react)](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react)
+export const typescriptLinks = [
+  [
+    "TypeScript Handbook",
+    "https://www.typescriptlang.org/docs/handbook/basic-types.html"
+  ],
+  [
+    "TypeScript Handbook- JSX",
+    "https://www.typescriptlang.org/docs/handbook/jsx.html"
+  ],
+  ["TypeScript Playground", "https://www.typescriptlang.org/play"]
+];
 
-[react-typescript-cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
+### React
 
-## TypeScript
+<ResourceLinkList links={reactLinks} />
 
-[TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+### TypeScript
 
-[TypeScript Handbook- JSX](https://www.typescriptlang.org/docs/handbook/jsx.html)
-
-[TypeScript Playground](https://www.typescriptlang.org/play)
+<ResourceLinkList links={typescriptLinks} />

@@ -18,4 +18,14 @@ const SVG = styled(ReactSVG)`
   }
 `;
 
-export const Welcome = () => <SVG src={URL} />;
+const LoadingBox = styled.div`
+  width: 70%;
+  height: 300px;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 200px;
+  }
+`;
+
+export const Welcome = () => <SVG src={URL} loading={LoadingBox} />;

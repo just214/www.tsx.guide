@@ -44,7 +44,7 @@ export const ReactTypeResult: React.FC<ReactTypeResultProps> = ({ result }) => {
       )} */}
 
       <Title>
-        {numberOfMembers} Member{members.length === 1 ? "" : "s"} /
+        {numberOfMembers} Member{members.length === 1 ? "" : "s"} and{" "}
         {numberOfExtendedMembers} Extended Members:
       </Title>
 
