@@ -1,7 +1,6 @@
 require("typescript");
 const { parse } = require("react-docgen-typescript").withDefaultConfig();
 const path = require("path");
-require("./component.tsx")
 
  const lll = require.resolve('./component.tsx');
  console.log("LLL", lll)

@@ -51,13 +51,12 @@ module.exports = {
     },
     prism: {
       defaultLanguage: "tsx"
+    },
+    algolia: {
+      apiKey: process.env.DOCSEARCH_API_KEY,
+      indexName: process.env.DOCSEARCH_INDEX_NAME,
+      algoliaOptions: {} // Optional, if provided by Algolia
     }
-    // Awaiting approval for Algolia DocSearch
-    // algolia: {
-    //   apiKey: "api-key",
-    //   indexName: "index-name",
-    //   algoliaOptions: {} // Optional, if provided by Algolia
-    // }
   },
   presets: [
     [
