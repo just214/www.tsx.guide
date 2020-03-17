@@ -1,13 +1,12 @@
 require("typescript");
 const { parse } = require("react-docgen-typescript").withDefaultConfig();
-const Module = module.constructor;
 const path = require("path");
 
-const lll = path.resolve(__dirname + '/Test.tsx')
+// const lll = require.resolve('./Test.tsx')
 
 exports.handler = async (event, context) => {
   const type = event.queryStringParameters.type;
-  const res = parse(lll);
+  const res = parse("./Test.tsx");
   const result = res.find(({ displayName }) => displayName === type).props;
 
   return {
