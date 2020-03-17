@@ -1,12 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-const Flex = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0px;
-`;
+import { Flex } from "./Flex";
 
 const Name = styled.h3`
   margin: 5px;

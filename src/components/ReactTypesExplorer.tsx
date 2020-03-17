@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Select from "react-select";
 import { Show } from "./Show";
 import { ReactTypeResult } from "./ReactTypeResult";
+import { Flex } from "./Flex";
+import { useReactTypesExplorer } from "../hooks/useReactTypesExplorer";
 
 const IS_DEV = false;
 
@@ -12,18 +14,12 @@ const StyledSelect = styled(Select)`
 
 const options = [
   "Select a Type",
+  "AllHTMLAttributes",
   "AriaAttributes",
   "AnchorHTMLAttributes",
-  "HTMLAttributes",
-  "AllHTMLAttributes"
+  "DOMAttributes",
+  "HTMLAttributes"
 ].map(v => ({ value: v, label: v }));
-
-const Flex = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-`;
 
 type Member = {
   name: string;
@@ -44,51 +40,24 @@ export type Result = {
 };
 
 export const ReactTypesExplorer = () => {
-  const [choice, setChoice] = useState({
-    value: "Select a Type",
-    label: "Select a Type"
-  });
-  const [result, setResult] = useState<Result | null>(null);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setResult(null);
-    if (choice.label) {
-      if (choice.label === "Select a Type") {
-        return;
-      }
-      setLoading(true);
-      const apiPath = `/.netlify/functions/reactTypesExplorer?type=${choice.value}`;
-      const basePath = IS_DEV ? "http://localhost:34567" : "";
-      fetch(`${basePath}${apiPath}`)
-        .then(response => response.json())
-        .then(json => {
-          setResult(json);
-        })
-        .catch(error => {
-          console.log("ERROR::: ", error);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }
-  }, [choice]);
+  const { selection, setSelection, value } = useReactTypesExplorer();
 
   return (
     <>
       <Flex>
         <StyledSelect
-          value={choice}
-          onChange={opt => setChoice(opt)}
+          value={selection}
+          onChange={(opt: any) => setSelection(opt)}
           options={options}
           style={{ width: "100%" }}
           isSearchable={true}
         />
       </Flex>
-      <Show when={!!result}>
-        <ReactTypeResult result={result as Result} />
+      <br />
+      <Show when={!!value}>
+        <ReactTypeResult result={value as Result} />
       </Show>
-      <Show when={!result}>
+      <Show when={!value}>
         <p>Select a React Type Definition to explore it's properties.</p>
       </Show>
     </>

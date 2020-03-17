@@ -14,7 +14,7 @@ const Title = styled.h4`
 `;
 
 export const ReactTypeResult: React.FC<ReactTypeResultProps> = ({ result }) => {
-  const { name, signature, extends: ext, members, extendedMembers } = result;
+  const { name, signature, members, extendedMembers } = result;
   const numberOfMembers = members.length;
   const numberOfExtendedMembers = Object.values(extendedMembers).reduce(
     (acc, value) => {
@@ -33,15 +33,6 @@ export const ReactTypeResult: React.FC<ReactTypeResultProps> = ({ result }) => {
           <code>{signature}</code>
         </div>
       </Show>
-      {/* 
-      {!!ext.length && (
-        <div>
-          <Title>Extends:</Title>
-          {ext.map(e => (
-            <Code key={e}>{e}</Code>
-          ))}
-        </div>
-      )} */}
 
       <Title>
         {numberOfMembers} Member{members.length === 1 ? "" : "s"} and{" "}
