@@ -1,5 +1,4 @@
-import * as React from "react";
-
+ 
  const HTMLElement = (props: HTMLElement) => null;
  const HTMLAnchorElement = (props: HTMLAnchorElement) => null;
  const HTMLAreaElement = (props: HTMLAreaElement) => null;
