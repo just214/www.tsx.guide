@@ -58,7 +58,7 @@ export const ReactTypesExplorer = () => {
         return;
       }
       setLoading(true);
-      const apiPath = `/.netlify/functions/getReactDTS?type=${choice.value}`;
+      const apiPath = `/.netlify/functions/reactTypesExplorer?type=${choice.value}`;
       const basePath = IS_DEV ? "http://localhost:34567" : "";
       fetch(`${basePath}${apiPath}`)
         .then(response => response.json())

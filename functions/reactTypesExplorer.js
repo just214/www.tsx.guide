@@ -1,4 +1,3 @@
-const { parse } = require("react-docgen-typescript").withDefaultConfig();
 const path = require("path");
 const types = require("./react-types.json")
 
