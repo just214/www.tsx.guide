@@ -59,9 +59,8 @@ const other = createGroup("Other", [
 
 const examples = createGroup("Examples", ["mdx"]);
 const resources = createGroup("Resources", [
-  "resources/links",
-  // Not currently working in production
-  "resources/react-types-explorer"
+  "resources/react-types-explorer",
+  "resources/links"
 ]);
 const site = createGroup("Site", [
   "site/about-site",
