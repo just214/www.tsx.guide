@@ -21,7 +21,7 @@ There are many benefits that come along with choosing to write your React apps i
 Static types enable great editor/IDE tools that can help catch bugs in real-time, offer auto-completion/Intellisense, and more. This leads to a much better developer experience, more predictable code, and way less open browser tabs.
 :::
 
-<img src="https://res.cloudinary.com/gojutin/image/upload/v1584560441/www.tsx.guide/typescript-react.gif" />
+<img src="https://res.cloudinary.com/gojutin/image/upload/v1584562353/www.tsx.guide/typescript-react.gif" />
 
 <br />
 

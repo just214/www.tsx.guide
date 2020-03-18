@@ -15,7 +15,7 @@ export const ResourceLinkList: React.FC<ResourceLinkListProps> = ({
   const renderLinks = links.map(link => {
     const [label, url] = link;
     return (
-      <ResourceLink key={label} href={url}>
+      <ResourceLink href={url} key={label}>
         {label}
       </ResourceLink>
     );

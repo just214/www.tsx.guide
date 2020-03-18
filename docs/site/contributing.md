@@ -43,7 +43,7 @@ The source code is made up of two parts-
 
 1. **The website**
 
-This site is built with [Docusaurus 2](https://v2.docusaurus.io/) and has few customizations beyond the defaults.
+This site is built with [Docusaurus 2](https://v2.docusaurus.io/) and has few customizations beyond the defaults. The custom components are built using [styled-components](https://styled-components.com/) and [Infima](https://facebookincubator.github.io/infima/docs/getting-started/introduction). There is a [INFIMA_CHEATSHEET.md](https://github.com/gojutin/www.tsx.guide/blob/master/INFIMA_CHEATSHEET.md) file that details most of the css utilities that the library provides.
 
 2. **The Documentation**
 
