@@ -17,6 +17,23 @@ keywords:
 image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
-import { ReactTypesExplorer } from "../../src/components/ReactTypesExplorer";
+import styled from "styled-components";
+import { LinkButton } from "../../src/components/LinkButton";
 
+export const Frame = styled.iframe`
+  width: 78vw;
+  height: 100vh;
+  border: none;
+  @media (max-width: 500px) {
+    width: 100vw;
+  }
+`;
+
+export const ReactTypesExplorer = () => {
+  return <Frame src="https://react-types.netlify.com" />;
+};
+
+<LinkButton href="https://react-types.netlify.com">
+  View Original Site
+</LinkButton>
 <ReactTypesExplorer />

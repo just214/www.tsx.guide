@@ -2,7 +2,7 @@
 id: contributing
 title: Contributing
 sidebar_label: Contributing
-custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/site/contributing.md
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/site/contributing.mdx
 description: Contributing to the tsx.guide documentation website.
 keywords:
   - typescript
@@ -20,14 +20,14 @@ Do you have an idea on how to improve this site or see something that doesn't qu
 
 There are two ways that you can help:
 
-1. **Share your ideas/feedback, or report mistakes/bugs in a GitHub Issue.**
-2. **Change the code yourself.**
+1. Share your ideas/feedback, or report mistakes/bugs in a GitHub Issue.
+2. Change the code yourself.
 
-> Please review the [Code of Conduct](code-of-conduct) before you make any contributions.
+> Please review the [Code of Conduct](./code-of-conduct.mdx) before you make any contributions.
 
-## File an Issue
+## 1. File an Issue
 
-If you don't feel like going in and making any changes to the code yourself, you can [submit an issue on GitHub](https://github.com/gojutin/www.tsx.guide/issues).
+If you don't feel like going in and making any changes to the code yourself, you can [submit an issue on GitHub].
 
 > Please look through the existing issues to make sure that whatever you are reporting is not already reported.
 
@@ -37,13 +37,18 @@ When you click the `New Issue` button, you can choose to file an issue for one o
 - **Suggestion for Documentation/Site**
 - **Bug report**
 
-## Change the Code
+## 2. Change the Code
 
-The source code is made up of two parts-
+The source code is conceptually made up of two parts:
 
 1. **The website**
 
-This site is built with [Docusaurus 2](https://v2.docusaurus.io/) and has few customizations beyond the defaults. The custom components are built using [styled-components](https://styled-components.com/) and [Infima](https://facebookincubator.github.io/infima/docs/getting-started/introduction). There is a [INFIMA_CHEATSHEET.md](https://github.com/gojutin/www.tsx.guide/blob/master/INFIMA_CHEATSHEET.md) file that details most of the css utilities that the library provides.
+This site is built with [Docusaurus 2] and has few customizations beyond the defaults. The custom components are built using [styled-components](https://styled-components.com/) and [Infima](https://facebookincubator.github.io/infima/docs/getting-started/introduction).
+
+There are a couple cheatsheets in the repo that are helpful when working on this project or creating documentation pages:
+
+- [INFIMA_CHEATSHEET]- details most of the css utilities that the library provides.
+- [MDX_CHEATSHEET]- details most of MDX features that are provided by Docusaurus.
 
 2. **The Documentation**
 
@@ -68,7 +73,7 @@ The second option is to fork the repo, and submit the changes through a Pull Req
 id: contributing
 title: Contributing
 sidebar_label: Contributing
-custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/introduction/contributing.md
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/introduction/contributing.mdx
 description: Contributing to the tsx.guide documentation website.
 keywords:
   - typescript
@@ -88,7 +93,7 @@ Remember, each page is a seperate route that manages it's own SEO. The `title`, 
 
 And, here are all of the available front matter options:
 
-Copied from [https://v2.docusaurus.io/docs/markdown-features](https://v2.docusaurus.io/docs/markdown-features)
+Copied from the [Docusaurus Docs]:
 
 - `id`: A unique document id. If this field is not present, the document's `id` will default to its file name (without the extension).
 - `title`: The title of your document. If this field is not present, the document's `title` will default to its `id`.
@@ -99,3 +104,9 @@ Copied from [https://v2.docusaurus.io/docs/markdown-features](https://v2.docusau
 - `keywords`: Keywords meta tag for the document page, for search engines.
 - `description`: The description of your document, which will become the `<meta name="description" content="..."/>` and `<meta property="og:description" content="..."/>` in `<head>`, used by search engines. If this field is not present, it will default to the first line of the contents.
 - `image`: Cover or thumbnail image that will be used when displaying the link to your post.
+
+[submit an issue on github]: https://github.com/gojutin/www.tsx.guide/issues
+[docusaurus 2]: https://v2.docusaurus.io/
+[infima_cheatsheet]: https://github.com/gojutin/www.tsx.guide/blob/master/INFIMA_CHEATSHEET.md
+[mdx_cheatsheet]: https://github.com/gojutin/www.tsx.guide/blob/master/MDX_CHEATSHEET.md
+[docusaurus docs]: https://v2.docusaurus.io/docs/markdown-features
