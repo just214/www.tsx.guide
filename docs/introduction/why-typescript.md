@@ -15,7 +15,7 @@ keywords:
 image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
-There are many benefits that come along with choosing to write your React apps in TypeScript.
+You get a world of benefits when you choose to write your React apps in TypeScript.
 
 :::success TypeScript is awesome!
 Static types enable great editor/IDE tools that can help catch bugs in real-time, offer auto-completion/Intellisense, and more. This leads to a much better developer experience, more predictable code, and way less open browser tabs.
@@ -35,4 +35,4 @@ Static types enable great editor/IDE tools that can help catch bugs in real-time
 
 Most of these benefits are not unique to React and would apply to any project that uses TypeScript. Since TypeScript is a superset of JavaScript, it can be used pretty much anywhere that you can use JavaScript.
 
-Since JSX is just JavaScript, it is already in a great position to embrace the power of TypeScript. Not only that, TypeScript has first-class support for JSX in the compiler, types included! See [JSX vs. React Types](../tsx-files/jsx-vs-react-types) for more information on the differences between the JSX types provided by TypeScript vs. React.
+Since JSX is just JavaScript, it is already in a great position to embrace the power of TypeScript. Not only that, TypeScript has first-class support for JSX in the compiler, types included! See [JSX vs. React Types](../tsx-files/jsx-vs-react-types.md) for more information on the differences between the JSX types provided by TypeScript vs. React.

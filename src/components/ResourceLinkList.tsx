@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ResourceLink } from "./ResourceLink";
+import { LinkButton } from "./LinkButton";
 import { Flex } from "./Flex";
 
 type Link = [string, string];
@@ -15,9 +15,9 @@ export const ResourceLinkList: React.FC<ResourceLinkListProps> = ({
   const renderLinks = links.map(link => {
     const [label, url] = link;
     return (
-      <ResourceLink href={url} key={label}>
+      <LinkButton href={url} key={label}>
         {label}
-      </ResourceLink>
+      </LinkButton>
     );
   });
 
