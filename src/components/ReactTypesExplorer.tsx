@@ -44,7 +44,11 @@ export const ReactTypesExplorer = () => {
 
   return (
     <>
-      <Flex>
+      <iframe
+        style={{ width: "70vw", height: "100vh", border: "none" }}
+        src="https://happy-panini-df7563.netlify.com/"
+      />
+      {/* <Flex>
         <StyledSelect
           value={selection}
           onChange={(opt: any) => setSelection(opt)}
@@ -59,7 +63,7 @@ export const ReactTypesExplorer = () => {
       </Show>
       <Show when={!value}>
         <p>Select a React Type Definition to explore it's properties.</p>
-      </Show>
+      </Show> */}
     </>
   );
 };
