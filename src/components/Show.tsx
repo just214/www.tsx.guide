@@ -1,6 +1,6 @@
 import React from "react";
 
-export type ShowProps = {
+type ShowProps = {
   when: boolean;
 };
 

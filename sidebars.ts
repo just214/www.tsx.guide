@@ -57,7 +57,7 @@ const other = createGroup("Other", [
   "other/types-vs-interfaces"
 ]);
 
-const examples = createGroup("Examples", ["mdx"]);
+// const examples = createGroup("Examples", ["mdx"]);
 const resources = createGroup("Resources", [
   "resources/react-types-explorer",
   "resources/links"
@@ -79,7 +79,7 @@ module.exports = {
     ...hooks,
     ...functionComponents,
     ...other,
-    ...examples,
+    // ...examples,
     ...resources,
     ...site
   }

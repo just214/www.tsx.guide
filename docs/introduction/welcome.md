@@ -16,9 +16,9 @@ keywords:
 image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
-import {Welcome} from "../../src/components/Welcome";
+import {SVGImage} from "../../src/components/SVGImage";
 
-<Welcome />
+<SVGImage url="https://res.cloudinary.com/gojutin/image/upload/v1584291258/www.tsx.guide/undraw_welcome_cats.svg" />
 
 **This is a guide and cheatsheet for writing React apps with TypeScript.**
 

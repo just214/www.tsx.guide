@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "netlify dev",
+    "cold-dev": "rimraf .docusaurus && yarn dev",
     "start": "docusaurus start",
     "cold-start": "rimraf .docusaurus && yarn start",
     "build": "docusaurus build",
@@ -13,7 +14,6 @@
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.48",
     "@docusaurus/preset-classic": "^2.0.0-alpha.48",
-    "classnames": "^2.2.6",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
@@ -34,7 +34,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.8.3",
     "@types/node": "^13.9.1",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
