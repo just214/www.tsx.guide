@@ -2,30 +2,17 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-export const AboutSite = () => {
-  const data = [
-    {
-      text: "Built with Docusaurus 2",
-      logo: useBaseUrl("img/docusaurus-logo.svg"),
-      url: "https://v2.docusaurus.io/"
-    },
-    {
-      text: "Powered by React",
-      logo: useBaseUrl("img/react-logo.svg"),
-      url: "https://reactjs.org/"
-    },
-    {
-      text: "Deployed with Netlify",
-      logo: useBaseUrl("img/netlify-logo.svg"),
-      url: "https://www.netlify.com/"
-    },
-    {
-      text: "Hosted on GitHub",
-      logo: useBaseUrl("img/github-logo.svg"),
-      url: "https://github.com/gojutin/www.tsx.guide"
-    }
-  ];
+type DataItem = {
+  text: string;
+  logo: string;
+  url: string;
+};
 
+type Props = {
+  data: DataItem[];
+};
+
+export const AboutSite = ({ data }: Props) => {
   const Container = styled.div`
     margin-top: 30px;
     padding: 20px;
@@ -58,7 +45,7 @@ export const AboutSite = () => {
       <Fragment key={text}>
         <ItemWrapper>
           <a href={url} target="_blank" rel="noopener noreferrer">
-            <img src={logo} alt={text} height={60} />
+            <img src={useBaseUrl(logo)} alt={text} height={60} />
           </a>
           <ItemLabel>{text}</ItemLabel>
         </ItemWrapper>

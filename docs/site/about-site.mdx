@@ -18,8 +18,36 @@ image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide
 
 import { AboutSite } from "../../src/components/AboutSite";
 
+export const data = [
+  {
+    text: "Built with Docusaurus 2",
+    logo: "img/docusaurus-logo.svg",
+    url: "https://v2.docusaurus.io/"
+  },
+  {
+    text: "Powered by React",
+    logo: "img/react-logo.svg",
+    url: "https://reactjs.org/"
+  },
+  {
+    text: "Explorer Powered by TypeDoc",
+    logo: "img/typedoc-logo.svg",
+    url: "https://typedoc.org/"
+  },
+  {
+    text: "Deployed with Netlify",
+    logo: "img/netlify-logo.svg",
+    url: "https://www.netlify.com/"
+  },
+  {
+    text: "Hosted on GitHub",
+    logo: "img/github-logo.svg",
+    url: "https://github.com/gojutin/www.tsx.guide"
+  }
+];
+
 :::tip
 Click the logos to visit the sites
 :::
 
-<AboutSite />
+<AboutSite data={data} />
