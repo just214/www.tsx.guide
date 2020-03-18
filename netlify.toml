@@ -6,7 +6,6 @@
 [build]
   command = "yarn run build"
   publish = "build"
-  functions = "functions"
 
 # note: each of these fields are OPTIONAL
 [dev]
