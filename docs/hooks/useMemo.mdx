@@ -17,6 +17,35 @@ keywords:
 image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
-import { UnderConstruction } from "../../src/components/UnderConstruction";
+You can use the `useMemo` hook to hold memoized values of any kind, including components.
 
-<UnderConstruction />
+The hook will automatically infer the type based on the return value of the callback that you provide.
+
+### As a computed value:
+
+```tsx
+const price = 3.99;
+const tax = 0.58;
+
+// type is number
+const total = useMemo(() => {
+  return price + tax;
+}, [price, tax]);
+
+return <>{total}</>;
+```
+
+The total value will be re-computed any time the price or tax changes.
+
+### As a component instance:
+
+```tsx
+// type is JSX.Element
+const MemoInstance = useMemo(() => {
+  return <div>Hello World</div>;
+}, []);
+
+return <>{MemoInstance}</>;
+```
+
+This memoized component instance will never get updated since an empty array was passed as a second argument.
