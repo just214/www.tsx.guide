@@ -17,6 +17,55 @@ keywords:
 image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
-import { UnderConstruction } from "../../src/components/UnderConstruction";
+For the most part, custom hooks are handled just like normal functions. You can explicitly provide type annotations or TypeScript can infer the return type whenever possible.
 
-<UnderConstruction />
+Custom hooks can contain and return any number of things, including built-in hooks, components, and other custom hooks. Therefore, getting full type support is a matter of ensuring that you are providing correct types to the return value of the custom hook.
+
+### Returning Arrays
+
+When returning arrays, you must explicitly set the return type or the wrong type may get inferred.
+
+You can do this with a const assertion, tuple assertion, or explicit return type:
+
+Const assertion
+
+```tsx {7}
+function useToggle(intialState: boolean) {
+  const [value, setValue] = useState(intialState);
+
+  function toggle() {
+    setValue(v => !v);
+  }
+  return [value, toggle] as const;
+}
+```
+
+Tuple assertion
+
+```tsx {7}
+function useToggle(intialState: boolean) {
+  const [value, setValue] = useState(intialState);
+
+  function toggle() {
+    setValue(v => !v);
+  }
+  return [value, toggle] as [boolean, () => void];
+}
+```
+
+Explicit return type
+
+```tsx {1}
+function useToggle(intialState: boolean): [boolean, () => void] {
+  const [value, setValue] = useState(intialState);
+
+  function toggle() {
+    setValue(v => !v);
+  }
+  return ["ds", toggle];
+}
+```
+
+### Limit your tuples
+
+If your custom hook returns more than two things, it is recommended that you return an object.
