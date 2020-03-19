@@ -24,8 +24,8 @@ The hook will automatically infer the type based on the return value of the call
 ### As a computed value:
 
 ```tsx
-const price = 3.99;
-const tax = 0.58;
+const [price, setPrice] = useState(0);
+const [tax, setTax] = useState(0);
 
 // type is number
 const total = useMemo(() => {
