@@ -52,6 +52,7 @@ const functionComponents = createGroup("Function Components", [
 
 const other = createGroup("Other", [
   "other/class-components",
+  "other/forms-and-events",
   "other/forwardRef-createRef",
   "other/default-props",
   "other/types-vs-interfaces"

@@ -8,16 +8,16 @@ DOCUMENTATION
 
 - [x] hooks/useReducer
 - [x] hooks/useMemo
-- [ ] hooks/useLayoutEffect
+- [x] hooks/useLayoutEffect
 - [ ] hooks/useImperativeHandle
 - [x] hooks/useDebugValue
-- [ ] hooks/custom-hooks
+- [x] hooks/custom-hooks
 - [ ] hooks/useContext
-- [ ] hooks/useEffect
+- [x] hooks/useEffect
 - [ ] other/default-props
 - [ ] other/class-components
 - [ ] other/types-vs-interfaces
-- [ ] Forms and Events
+- [x] Forms and Events
 - [ ] tsconfig.json
 - [ ] TSDoc
 - [ ] Linting
