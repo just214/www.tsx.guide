@@ -17,6 +17,145 @@ keywords:
 image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
 ---
 
-import { UnderConstruction } from "../../src/components/UnderConstruction";
+It's possible to get full type safety with the `useReducer` hook, including an exhaustive check to ensure that the `reducer` handles every possible case.
 
-<UnderConstruction />
+Start by defining the type definition for the state and action. The action type is defining using a [Discriminated Union]:
+
+```tsx
+type State = {
+  loading: boolean;
+  value: number;
+};
+
+type Action =
+  | { type: "SET_LOADING"; payload: boolean }
+  | { type: "SET_VALUE"; payload: number };
+```
+
+When defining the `reducer` function, it is important to explicitly set the argument types and return type of the function:
+
+```tsx {1}
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "SET_LOADING":
+      return {
+        ...state,
+        loading: action.payload
+      };
+    case "SET_VALUE":
+      return {
+        ...state,
+        value: action.payload
+      };
+    default: {
+      return state;
+    }
+  }
+```
+
+Now, all together:
+
+```tsx
+type State = {
+  loading: boolean;
+  value: number;
+};
+
+type Action =
+  | { type: "SET_LOADING"; payload: boolean }
+  | { type: "SET_VALUE"; payload: number };
+
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "SET_LOADING":
+      return {
+        ...state,
+        loading: action.payload
+      };
+    case "SET_VALUE":
+      return {
+        ...state,
+        value: action.payload
+      };
+    default: {
+      return state;
+    }
+  }
+}
+```
+
+Now there is full type safety for the state and actions in the `reducer` function.
+
+## Exhautive Check
+
+The above example provides much of the type safety, but it doesn't catch unhandled cases. For instance, this would not result in an error even though the `SET_VALUE` action was not handled:
+
+```tsx
+type State = {
+  loading: boolean;
+  value: number;
+};
+
+type Action =
+  | { type: "SET_LOADING"; payload: boolean }
+  | { type: "SET_VALUE"; payload: number };
+
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "SET_LOADING":
+      return {
+        ...state,
+        loading: action.payload
+      };
+    // No case for SET_VALUE
+    default: {
+      return state;
+    }
+  }
+}
+```
+
+This can be fixed with a simple function and change to the default case:
+
+```tsx {23,28-30}
+type State = {
+  loading: boolean;
+  value: number;
+};
+
+type Action =
+  | { type: "SET_LOADING"; payload: boolean }
+  | { type: "SET_VALUE"; payload: number };
+
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "SET_LOADING":
+      return {
+        ...state,
+        loading: action.payload
+      };
+    case "SET_VALUE":
+      return {
+        ...state,
+        value: action.payload
+      };
+    default: {
+      return exhaustiveCheck(state);
+    }
+  }
+}
+
+function exhaustiveCheck(type: never): never {
+  throw new Error("Missing type");
+}
+```
+
+The `exhaustiveCheck` function works like this:
+
+By the time we reach the default case, we expect all of our actions to be handled. Therefore, we can expect that the type of `action.type` would be `never`.
+
+Instead of returning the state in the default case, we run `action.type` through a function that checks that it is of type `never`- the type that’s left after all other cases have been removed.
+
+If an action type is not handled, the `exhaustiveCheck` function will throw an error because it received the case that was not handled.
+
+[discriminated union]: https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions

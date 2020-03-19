@@ -120,7 +120,7 @@ No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
-```js {2}
+```jsx {1,4-6,11}
 function highlightMe() {
   console.log("This line can be highlighted!");
 }
