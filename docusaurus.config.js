@@ -81,5 +81,6 @@ module.exports = {
       changefreq: "weekly",
       priority: 0.5
     }
-  ]
+  ],
+  themes: ["@docusaurus/theme-live-codeblock"]
 };

@@ -1,0 +1,78 @@
+---
+id: form-example
+title: Form Example
+sidebar_label: Form Example
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/other/form-example.mdx
+description: A guide to using React forms and events with TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - forms
+  - events
+  - example
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
+---
+
+```tsx
+import React, { useState, ChangeEvent, FormEvent } from "react";
+
+function App() {
+  const [email, setEmail] = useState("");
+  const [reason, setReason] = useState("");
+  const [message, setMessage] = useState("");
+  const [joinNewsletter, setJoinNewsletter] = useState(false);
+
+  function handleSetEmail(e: ChangeEvent<HTMLInputElement>) {
+    setEmail(e.target.value);
+  }
+
+  function handleSetReason(e: ChangeEvent<HTMLSelectElement>) {
+    setReason(e.target.value);
+  }
+
+  function handleSetMessage(e: ChangeEvent<HTMLTextAreaElement>) {
+    setMessage(e.target.value);
+  }
+
+  function handleSetJoinNewsletter(e: ChangeEvent<HTMLInputElement>) {
+    setJoinNewsletter(e.target.checked);
+  }
+
+  function handleSubmit(e: FormEvent) {
+    console.log(e);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="email">Email</label>
+      <input type="email" id="email" value={email} onChange={handleSetEmail} />
+
+      <label htmlFor="reason">Reason</label>
+      <select id="reason" value={reason} onChange={handleSetReason}>
+        <option value="say-hi">Say Hi</option>
+        <option value="report-bug">Report Bug</option>
+      </select>
+
+      <label htmlFor="message">Message</label>
+      <textarea id="message" value={message} onChange={handleSetMessage} />
+
+      <label htmlFor="join-newsletter">Join Newsletter</label>
+      <input
+        type="checkbox"
+        id="join-newsletter"
+        checked={joinNewsletter}
+        onChange={handleSetJoinNewsletter}
+      />
+
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default App;
+```

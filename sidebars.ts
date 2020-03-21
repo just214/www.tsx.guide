@@ -53,6 +53,7 @@ const functionComponents = createGroup("Function Components", [
 const formEventComponents = createGroup("Forms and Events", [
   "forms-and-events/forms-event-basics",
   "forms-and-events/react-event-types",
+  "forms-and-events/form-example",
   "forms-and-events/target-vs-currenttarget"
 ]);
 

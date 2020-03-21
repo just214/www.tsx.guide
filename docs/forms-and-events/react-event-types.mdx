@@ -19,7 +19,7 @@ image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide
 
 import { CodeGif } from "../../src/components/CodeGif";
 
-There are several kinds of events in React. You can view the [React Docs](https://reactjs.org/docs/events.html) for more information about each event type.
+React wraps the browser's native events in a [SyntheticEvent](https://reactjs.org/docs/events.html) wrapper. You can view the [React Docs](https://reactjs.org/docs/events.html) for more information about each event type.
 
 Most React event types are generics which take a type argument of the element they are targeting:
 
@@ -36,16 +36,6 @@ If you are unsure of a type, you can hover over the event handler (onChange, onS
 <CodeGif src="https://res.cloudinary.com/gojutin/image/upload/v1584816385/www.tsx.guide/react-events-hover.gif" />
 
 :::
-
-### Change Events
-
-For a ChangeEvent, you will need to provide the HTML type as a type argument to the generic `ChangeEvent` type:
-
-| Component Type | Event Type                               |
-| -------------- | ---------------------------------------- |
-| Input          | `React.ChangeEvent<HTMLInputElement>`    |
-| Textarea       | `React.ChangeEvent<HTMLTextAreaElement>` |
-| Select         | `React.ChangeEvent<HTMLSelectElement>`   |
 
 ### React Event List
 
