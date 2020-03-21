@@ -1,0 +1,72 @@
+---
+id: react-event-types
+title: React Event Types
+sidebar_label: React Event Types
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/forms-and-events/react-event-types.mdx
+description: A guide to using React forms and events with TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - forms
+  - events
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
+---
+
+import { CodeGif } from "../../src/components/CodeGif";
+
+There are several kinds of events in React. You can view the [React Docs](https://reactjs.org/docs/events.html) for more information about each event type.
+
+Most React event types are generics which take a type argument of the element they are targeting:
+
+```ts
+React.MouseEvent<HTMLDivElement>;
+React.PointerEvent<HTMLSpanElement>;
+React.MouseEvent<HTMLDivElement>;
+React.KeyboardEvent<HTMLTextAreaElement>;
+```
+
+:::tip
+If you are unsure of a type, you can hover over the event handler (onChange, onSubmit, etc.) in VSCode to get some helpful hints.
+
+<CodeGif src="https://res.cloudinary.com/gojutin/image/upload/v1584816385/www.tsx.guide/react-events-hover.gif" />
+
+:::
+
+### Change Events
+
+For a ChangeEvent, you will need to provide the HTML type as a type argument to the generic `ChangeEvent` type:
+
+| Component Type | Event Type                               |
+| -------------- | ---------------------------------------- |
+| Input          | `React.ChangeEvent<HTMLInputElement>`    |
+| Textarea       | `React.ChangeEvent<HTMLTextAreaElement>` |
+| Select         | `React.ChangeEvent<HTMLSelectElement>`   |
+
+### React Event List
+
+Here is a list of every type of React event and corresponding type definition (if applicable).
+
+| Event Type         | Type Name                |
+| ------------------ | ------------------------ |
+| Clipboard Events   | `React.ClipboardEvent`   |
+| Composition Events | `React.CompositionEvent` |
+| Keyboard Events    | `React.KeyboardEvent`    |
+| Focus Events       | `React.FocusEvent`       |
+| Form Events        | `React.FormEvent`        |
+| Generic Events     | -                        |
+| Mouse Events       | `React.MouseEvent`       |
+| Pointer Events     | `React.PointerEvent`     |
+| Selection Events   | -                        |
+| Touch Events       | `React.TouchEvent`       |
+| UI Events          | `React.UIEvent`          |
+| Wheel Events       | `React.WheelEvent`       |
+| Media Events       | -                        |
+| Image Events       | -                        |
+| Animation Events   | `React.AnimationEvent`   |
+| Transition Events  | `React.TransitionEvent`  |
+| Other Events       | -                        |

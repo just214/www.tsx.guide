@@ -1,0 +1,89 @@
+---
+id: forms-event-basics
+title: Form and Event Basics
+sidebar_label: Basics
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/other/form-event-basics.mdx
+description: A guide to using React forms and events with TypeScript
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - forms
+  - events
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
+---
+
+### Inferred types
+
+For most events, the return type of the event argument is provides can be inferred when using inline handlers.
+In this example, the `onSubmit` event from the form and `onChange` event from the input are both inferred:
+
+```tsx {5-8,12-15}
+function App() {
+  const [email, setEmail] = useState("");
+  return (
+    <form
+      onSubmit={e => {
+        // e is of type React.FormEvent<HTMLFormElement>
+        e.preventDefault();
+      }}
+    >
+      <input
+        value={email}
+        onChange={e => {
+          // e is of type React.ChangeEvent<HTMLInputElement>
+          setEmail(e.currentTarget.value);
+        }}
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
+
+### Explicit types
+
+More often than not, you will want to extract these inline handlers to functions to prevent unnecessary re-renders and JSX bloat.
+
+By doing this, the types can no longer be inferred, resulting in TypeScript errors.
+
+```tsx {3-4,7-8}
+function App() {
+  const [email, setEmail] = useState("");
+  // Error
+  function handleSetEmail(e) {
+    setEmail(e.currentTarget.value);
+  }
+  // Error
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <input value={email} onChange={handleSetEmail} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
+
+You can provide the necessary types to the function arguments to fix this:
+
+```tsx {3,6}
+function App() {
+  const [email, setEmail] = useState("");
+  function handleSetEmail(e: React.ChangeEvent<HTMLInputElement>) {
+    setEmail(e.currentTarget.value);
+  }
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+  }
+  return <textarea value={email} onChange={handleSetEmail} />;
+}
+```
+
+Learn more about the different React event types in the next section.

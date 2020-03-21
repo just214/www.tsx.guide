@@ -1,0 +1,73 @@
+---
+id: target-vs-currenttarget
+title: target vs. currentTarget
+sidebar_label: target vs. currentTarget
+custom_edit_url: https://github.com/gojutin/www.tsx.guide/blob/master/docs/forms-and-events/target-vs-currenttarget.mdx
+description: A guide to understanding the difference between currentTarget and target in React.
+keywords:
+  - typescript
+  - react
+  - tsx
+  - guide
+  - cheatsheet
+  - docs
+  - reacttypescript
+  - forms
+  - events
+  - target
+  - currentTarget
+image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide/tsx-guide-logo.png
+---
+
+**`currentTarget`** - A reference to the element on which the event listener is registered.
+
+**`target`**- A reference to the element from which the event was originally dispatched. This might be a child element to the element on which the event listener is registered.
+
+This really has nothing to do with TypeScript usage with React, but can be a source of confusion.
+In fact, this really have nothing to do with React. `target` and `currentTarget` are part of the DOM Event Object API that React just mimics in JSX.
+
+You may have seen `target` and `currentTarget` used interchangebly in React event handlers:
+
+```tsx {6,10}
+function App() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  function handleSetName(e: React.ChangeEvent<HTMLInputElement>) {
+    setName(e.target.value);
+  }
+
+  function handleSetEmail(e: React.ChangeEvent<HTMLInputElement>) {
+    setEmail(e.currentTarget.value);
+  }
+
+  return (
+    <form onSubmit={e => console.log(e)}>
+      <input value={name} onChange={handleSetName} />
+      <input value={email} onChange={handleSetEmail} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
+
+So, which one should you use?
+
+For most common use cases, they can be used interchangebly as they are pointing to the same DOM node.
+
+There are situations where it does matter:
+
+```tsx
+function handleClick(e: React.MouseEvent<HTMLDivElement>) {
+  // Okay
+  console.log(e.currentTarget.classList);
+  // Error
+  console.log(e.target.classList);
+}
+```
+
+The good news is that as long as you provide the right type annotations, TypeScript should catch the problems immediately.
+
+Here is a great explanation of the differences between the two: [https://stackoverflow.com/a/5921615](https://stackoverflow.com/a/5921615)
+
+See [https://github.com/DefinitelyTyped/DefinitelyTyped/pull/12239](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/12239) for more information on the reasoning behind the React type definitions for events.

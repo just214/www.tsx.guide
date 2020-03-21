@@ -50,9 +50,15 @@ const functionComponents = createGroup("Function Components", [
   "function-components/without-react-fc"
 ]);
 
+const formEventComponents = createGroup("Forms and Events", [
+  "forms-and-events/forms-event-basics",
+  "forms-and-events/react-event-types",
+  "forms-and-events/target-vs-currenttarget"
+]);
+
 const other = createGroup("Other", [
   "other/class-components",
-  "other/forms-and-events",
+
   "other/forwardRef-createRef",
   "other/default-props",
   "other/types-vs-interfaces"
@@ -74,11 +80,12 @@ EXPORT
 */
 
 module.exports = {
-  sidebar: {
+  docsSidebar: {
     ...introduction,
     ...tsxFiles,
     ...hooks,
     ...functionComponents,
+    ...formEventComponents,
     ...other,
     // ...examples,
     ...resources,

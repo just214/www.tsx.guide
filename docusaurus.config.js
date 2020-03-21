@@ -7,6 +7,7 @@ module.exports = {
   organizationName: "gojutin", // Usually your GitHub org/user name.
   projectName: "www.tsx.guide", // Usually your repo name.
   themeConfig: {
+    sidebarCollapsible: true,
     navbar: {
       title: "",
       logo: {
