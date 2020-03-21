@@ -59,7 +59,6 @@ const formEventComponents = createGroup("Forms and Events", [
 
 const other = createGroup("Other", [
   "other/class-components",
-
   "other/forwardRef-createRef",
   "other/default-props",
   "other/types-vs-interfaces"
@@ -68,6 +67,7 @@ const other = createGroup("Other", [
 // const examples = createGroup("Examples", ["mdx"]);
 const resources = createGroup("Resources", [
   "resources/react-types-explorer",
+  "resources/definitelytyped-finder",
   "resources/links"
 ]);
 const site = createGroup("Site", [
