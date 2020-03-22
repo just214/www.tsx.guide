@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { FaFileCode, FaFolderOpen } from "react-icons/fa";
 import { Flex } from "./Flex";
 import { Show } from "./Show";
-import { Input } from "./Input";
+import { SearchInput } from "./SearchInput";
 import { Alert } from "./Alert";
 import { useDefinitelyTypedSearch } from "../hooks/useDefinitelyTypedSearch";
 import { formatBytes } from "../utils";
 
-export const DefinitelyTypeFinder = () => {
+export const DefinitelyTypedFinder = () => {
   const {
     search,
     contents,
@@ -31,7 +31,7 @@ export const DefinitelyTypeFinder = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <Input
+        <SearchInput
           type="search"
           value={searchValue}
           onChange={handleSetSearchValue}
