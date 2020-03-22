@@ -7,8 +7,9 @@
 import React from "react";
 // @ts-ignore
 import Head from "@docusaurus/Head";
+// @ts-ignore
 import { Redirect } from "@docusaurus/router";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import { useBaseUrl } from "../hooks";
 
 const TITLE = "tsx.guide";
 const URL = "https://www.tsx.guide";

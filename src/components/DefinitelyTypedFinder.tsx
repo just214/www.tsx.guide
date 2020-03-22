@@ -4,12 +4,9 @@ import { Flex } from "./Flex";
 import { Show } from "./Show";
 import { SearchInput } from "./SearchInput";
 import { Alert } from "./Alert";
-import { useDefinitelyTypedSearch } from "../hooks/useDefinitelyTypedSearch";
+import { useDefinitelyTypedSearch, useBaseUrl } from "../hooks";
 import { formatBytes } from "../utils";
-// @ts-ignore
-import Link from "@docusaurus/link";
-// @ts-ignore
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
 
 export const DefinitelyTypedFinder = () => {
   const {
@@ -56,16 +53,16 @@ export const DefinitelyTypedFinder = () => {
           <Link to={useBaseUrl("tsx-files/using-untyped-libraries")}>
             Using Untyped Libraries
           </Link>{" "}
-          to learn about other options.
+          to learn ways to used libraries without type definitions.
         </Alert>
       </Show>
 
       <Show when={!contents.length && !error}>
-        <Alert type="info" message="FIND A TYPE">
+        <p>
           DefinitelyTyped is holding place for the type definitions of thousands
-          of open-sourced JavaScript projects. Use this tool to quickly find out
-          if a package exists.
-        </Alert>
+          of open-sourced projects. Use this tool to quickly find out if a
+          package exists.
+        </p>
       </Show>
 
       <Show when={contents.length}>
@@ -77,9 +74,8 @@ export const DefinitelyTypedFinder = () => {
             <a href={pathToLib}>{pathToLib}</a>
           </p>
           <h4>Installation:</h4>
-          <div style={{ fontSize: "1.3rem", fontWeight: "bold" }}>
-            <code>yarn add -D @types/{lastSearchValue.toLowerCase()}</code> -or-{" "}
-            <code>npm install -D @types/{lastSearchValue.toLowerCase()}</code>
+          <div style={{ fontSize: "1.3rem" }}>
+            <pre>yarn add -D @types/{lastSearchValue.toLowerCase()}</pre>
           </div>
           <br />
           <h4>Contents:</h4>

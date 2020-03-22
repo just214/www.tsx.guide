@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import { useBaseUrl } from "../hooks";
 
 type DataItem = {
   text: string;

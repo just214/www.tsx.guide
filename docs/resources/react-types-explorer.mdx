@@ -18,7 +18,6 @@ image: https://res.cloudinary.com/gojutin/image/upload/v1584239143/www.tsx.guide
 ---
 
 import styled from "styled-components";
-import { LinkButton } from "../../src/components/LinkButton";
 
 export const Frame = styled.iframe`
   width: 100%;
@@ -30,7 +29,8 @@ export const ReactTypesExplorer = () => {
   return <Frame src="https://react-types.netlify.com" />;
 };
 
-<LinkButton href="https://react-types.netlify.com">
-  View Original Site
-</LinkButton>
+:::info
+You are viewing an embedded iframe of [https://react-types.netlify.com](https://react-types.netlify.com)
+:::
+
 <ReactTypesExplorer />
