@@ -1,103 +1,92 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-
-const Input = styled.input`
-  padding: 10px 12px;
-  border-radius: 8px;
-  width: 100%;
-
-  appearance: none;
-  border: 1px solid lightgray;
-  font-size: 20px;
-  margin-bottom: 20px;
-`;
-
-type Repo = {
-  name: string;
-  path: string;
-  sha: string;
-  size: number;
-  url: string;
-  html_url: string;
-  git_url: string;
-  download_url: string;
-  type: string;
-  _links: {
-    self: string;
-    git: string;
-    html: string;
-  };
-};
+import React, { useState } from "react";
+import { FaFileCode, FaFolderOpen } from "react-icons/fa";
+import { Flex } from "./Flex";
+import { Show } from "./Show";
+import { Input } from "./Input";
+import { Alert } from "./Alert";
+import { useDefinitelyTypedSearch } from "../hooks/useDefinitelyTypedSearch";
+import { formatBytes } from "../utils";
 
 export const DefinitelyTypeFinder = () => {
+  const {
+    search,
+    contents,
+    error,
+    lastSearchValue
+  } = useDefinitelyTypedSearch();
   const [searchValue, setSearchValue] = useState("");
-  const [data, setData] = useState([]);
-  const [notFound, setNotFound] = useState(false);
 
   function handleSetSearchValue(e: any) {
     setSearchValue(e.target.value);
   }
 
   function handleSubmit(e: React.FormEvent) {
-    if (!searchValue) return;
-    setNotFound(false);
-
     e.preventDefault();
-    fetch(
-      `https://api.github.com/repos/DefinitelyTyped/DefinitelyTyped/contents/types/${searchValue}`
-    )
-      .then(res => {
-        console.log("RES", res);
-        if (res.status === 404) {
-          setData([]);
-          setNotFound(true);
-        } else {
-          res.json().then(value => {
-            setData(value as any);
-          });
-        }
-      })
-      .catch(e => {
-        console.log("Error", e);
-        setData([]);
-      });
+    if (!searchValue.length) return;
+    search(searchValue);
   }
 
-  const pathToLib = `https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/
-  ${searchValue.toLowerCase()}`;
+  const pathToLib = `https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/${lastSearchValue.toLowerCase()}`;
 
   return (
     <>
       <form onSubmit={handleSubmit}>
         <Input
+          type="search"
           value={searchValue}
           onChange={handleSetSearchValue}
-          placeholder="react"
+          placeholder={`Try "react"`}
         />
       </form>
-      {notFound && (
-        <p>
-          DefinitelyTyped does not have a <b>{searchValue}</b> package.
-        </p>
-      )}
-      {!!data.length && (
+
+      <Show when={error}>
+        <Alert
+          type="danger"
+          message={`DefinitelyTyped does not have a "${lastSearchValue}" package.`}
+        />
+      </Show>
+      <Show when={contents.length}>
         <div>
-          <h3>Match!</h3>
-          <pre>yarn add -D @types/{searchValue.toLowerCase()}</pre> or{" "}
-          <pre>npm install -D @types/{searchValue.toLowerCase()}</pre>
+          <Alert type="success" message="Match!" />
+
+          <h4>GitHub Link:</h4>
           <p>
             <a href={pathToLib}>{pathToLib}</a>
           </p>
+          <h4>Installation:</h4>
+          <div style={{ fontSize: "1.3rem", fontWeight: "bold" }}>
+            <code>yarn add -D @types/{lastSearchValue.toLowerCase()}</code> -or-{" "}
+            <code>npm install -D @types/{lastSearchValue.toLowerCase()}</code>
+          </div>
+          <br />
           <h4>Contents:</h4>
-          {data.map((d: Repo) => {
+          {contents.map(d => {
             return (
-              <div key={d.name}>
-                <a href={d.html_url}>{d.name}</a>
-              </div>
+              <Flex key={d.name}>
+                <Show when={d.type === "file"}>
+                  <FaFileCode
+                    style={{ color: "var(--ifm-color-emphasis-700)" }}
+                    size={16}
+                  />
+                </Show>
+                <Show when={d.type === "dir"}>
+                  <FaFolderOpen
+                    style={{ color: "var(--ifm-color-emphasis-700)" }}
+                    size={16}
+                  />
+                </Show>
+
+                <a href={d.html_url} style={{ margin: "0px 5px" }}>
+                  {d.name}
+                </a>
+                <Show when={d.type === "file"}>
+                  <small>({formatBytes(d.size)})</small>
+                </Show>
+              </Flex>
             );
           })}
         </div>
-      )}
+      </Show>
     </>
   );
 };
