@@ -13,6 +13,8 @@ const StyledInput = styled.input`
   appearance: none;
   border: 1px solid var(--ifm-color-emphasis-300);
   background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-800);
+  font-weight: 500;
   font-size: 20px;
   margin-bottom: 20px;
   outline: none;
