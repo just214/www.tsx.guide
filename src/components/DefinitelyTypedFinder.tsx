@@ -4,9 +4,9 @@ import { Flex } from "./Flex";
 import { Show } from "./Show";
 import { SearchInput } from "./SearchInput";
 import { Alert } from "./Alert";
+import { Link } from "./Link";
 import { useDefinitelyTypedSearch, useBaseUrl } from "../hooks";
 import { formatBytes } from "../utils";
-import Link from "@docusaurus/Link";
 
 export const DefinitelyTypedFinder = () => {
   const {
@@ -59,9 +59,11 @@ export const DefinitelyTypedFinder = () => {
 
       <Show when={!contents.length && !error}>
         <p>
-          DefinitelyTyped is holding place for the type definitions of thousands
-          of open-sourced projects. Use this tool to quickly find out if a
-          package exists.
+          <Link href="https://github.com/DefinitelyTyped/DefinitelyTyped">
+            DefinitelyTyped
+          </Link>{" "}
+          is holding place for the type definitions of thousands of open-sourced
+          projects. Use this tool to quickly find out if a package exists.
         </p>
       </Show>
 

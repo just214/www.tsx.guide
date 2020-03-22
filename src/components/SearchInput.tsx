@@ -31,7 +31,7 @@ const SearchIcon = styled(FaSearch)`
 export const SearchInput = forwardRef<HTMLInputElement, any>((props, ref) => {
   return (
     <Container>
-      <SearchIcon size={16} />
+      <SearchIcon size={14} />
       <StyledInput ref={ref} {...props} />
     </Container>
   );
