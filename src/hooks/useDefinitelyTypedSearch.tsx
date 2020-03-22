@@ -43,5 +43,11 @@ export function useDefinitelyTypedSearch() {
       });
   }
 
-  return { search, contents, error, lastSearchValue } as const;
+  function clear() {
+    setContents([]);
+    setError(false);
+    setLastSearchValue("");
+  }
+
+  return { search, clear, contents, error, lastSearchValue } as const;
 }

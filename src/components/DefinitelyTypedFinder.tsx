@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaFileCode, FaFolderOpen } from "react-icons/fa";
 import { Flex } from "./Flex";
 import { Show } from "./Show";
@@ -6,15 +6,26 @@ import { SearchInput } from "./SearchInput";
 import { Alert } from "./Alert";
 import { useDefinitelyTypedSearch } from "../hooks/useDefinitelyTypedSearch";
 import { formatBytes } from "../utils";
+// @ts-ignore
+import Link from "@docusaurus/link";
+// @ts-ignore
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 export const DefinitelyTypedFinder = () => {
   const {
     search,
     contents,
     error,
+    clear,
     lastSearchValue
   } = useDefinitelyTypedSearch();
   const [searchValue, setSearchValue] = useState("");
+
+  useEffect(() => {
+    if (!searchValue.length) {
+      clear();
+    }
+  }, [searchValue]);
 
   function handleSetSearchValue(e: any) {
     setSearchValue(e.target.value);
@@ -40,11 +51,26 @@ export const DefinitelyTypedFinder = () => {
       </form>
 
       <Show when={error}>
-        <Alert type="danger" message={`No "${lastSearchValue}" package.`} />
+        <Alert type="danger" message={`No "${lastSearchValue}" package.`}>
+          See{" "}
+          <Link to={useBaseUrl("tsx-files/using-untyped-libraries")}>
+            Using Untyped Libraries
+          </Link>{" "}
+          to learn about other options.
+        </Alert>
       </Show>
+
+      <Show when={!contents.length && !error}>
+        <Alert type="info" message="FIND A TYPE">
+          DefinitelyTyped is holding place for the type definitions of thousands
+          of open-sourced JavaScript projects. Use this tool to quickly find out
+          if a package exists.
+        </Alert>
+      </Show>
+
       <Show when={contents.length}>
         <div>
-          <Alert type="success" message="Match!" />
+          <Alert type="success" message="MATCH!" />
 
           <h4>GitHub Link:</h4>
           <p>

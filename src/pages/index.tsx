@@ -5,7 +5,8 @@
   for https://tsx.guide so that they get nice unfurling, Twitter card, etc.
 */
 import React from "react";
-import { Helmet } from "react-helmet";
+// @ts-ignore
+import Head from "@docusaurus/Head";
 import { Redirect } from "@docusaurus/router";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
@@ -21,7 +22,7 @@ const IMAGE =
 const App = () => {
   return (
     <>
-      <Helmet>
+      <Head>
         <meta charSet="utf-8" />
         <title>{TITLE}</title>
         <link rel="canonical" href={URL} />
@@ -41,7 +42,7 @@ const App = () => {
         <meta property="twitter:title" content={TITLE} />
         <meta property="twitter:description" content={DESCRIPTION} />
         <meta property="twitter:image" content={IMAGE} />
-      </Helmet>
+      </Head>
 
       <Redirect to={useBaseUrl("/introduction/welcome")} />
     </>

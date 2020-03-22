@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
 
 const Container = styled.div`
-  position: relative;
+  margin-bottom: 20px;
 `;
 
 const StyledInput = styled.input`
@@ -16,7 +16,7 @@ const StyledInput = styled.input`
   color: var(--ifm-color-emphasis-800);
   font-weight: 500;
   font-size: 20px;
-  margin-bottom: 20px;
+
   outline: none;
   text-indent: 35px;
 `;
