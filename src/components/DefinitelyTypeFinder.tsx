@@ -40,10 +40,7 @@ export const DefinitelyTypeFinder = () => {
       </form>
 
       <Show when={error}>
-        <Alert
-          type="danger"
-          message={`DefinitelyTyped does not have a "${lastSearchValue}" package.`}
-        />
+        <Alert type="danger" message={`No "${lastSearchValue}" package.`} />
       </Show>
       <Show when={contents.length}>
         <div>

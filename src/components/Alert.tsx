@@ -8,7 +8,7 @@ type AlertProps = {
 };
 
 export const Alert = ({ type, message }: AlertProps) => {
-  const Icon = type === "success" ? FaExclamationTriangle : FaCheckCircle;
+  const Icon = type === "success" ? FaCheckCircle : FaExclamationTriangle;
   return (
     <div className={`admonition admonition-${type} alert alert--${type}`}>
       <Flex>
