@@ -68,6 +68,7 @@ const other = createGroup("Other", [
 const resources = createGroup("Resources", [
   "resources/react-types-explorer",
   "resources/definitelytyped-finder",
+  "resources/react-prop-types",
   "resources/links"
 ]);
 const site = createGroup("Site", [

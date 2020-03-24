@@ -27,7 +27,7 @@ This is exactly where the `forwardRef` comes in.
 Here is an example of a component that uses `forwardRef` to meet all of this criteria. The types are provided as type arguments to the generic `forwardRef` function.
 
 ```tsx {7}
-type Props = React.HTMLProps<HTMLInputElement> & {
+type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   myCustomProp?: boolean;
 };
 

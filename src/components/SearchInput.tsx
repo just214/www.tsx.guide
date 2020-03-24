@@ -1,4 +1,4 @@
-import React, { forwardRef, HTMLProps } from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
 
@@ -28,7 +28,10 @@ const SearchIcon = styled(FaSearch)`
   color: var(--ifm-color-emphasis-600);
 `;
 
-export const SearchInput = forwardRef<HTMLInputElement, any>((props, ref) => {
+export const SearchInput = forwardRef<
+  HTMLInputElement,
+  React.InputHTMLAttributes<HTMLInputElement>
+>((props, ref) => {
   return (
     <Container>
       <SearchIcon size={14} />
