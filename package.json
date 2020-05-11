@@ -17,9 +17,9 @@
     "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.39",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-icons": "^3.9.0",
-    "react-svg": "^11.0.15",
-    "styled-components": "^5.0.1",
+    "react-icons": "^3.10.0",
+    "react-svg": "^11.0.21",
+    "styled-components": "^5.1.0",
     "typescript": "^3.8.3"
   },
   "browserslist": {
@@ -35,11 +35,11 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^13.9.2",
-    "@types/react": "^16.9.25",
-    "@types/react-dom": "^16.9.5",
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
     "@types/react-helmet": "^5.0.15",
-    "@types/styled-components": "^5.0.1",
+    "@types/styled-components": "^5.1.0",
     "rimraf": "^3.0.2"
   }
 }
